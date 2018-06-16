@@ -160,8 +160,8 @@
         "text": "Nong Khai"
     },
     {
-        "key": "mhs",
-        "value": "mhs",
+        "key": "msk",
+        "value": "msk",
         "text": "Maha Sarakham"
     },
     {
@@ -290,8 +290,8 @@
         "text": "Suphan Buri"
     },
     {
-        "key": "nkp",
-        "value": "nkp",
+        "key": "nkh",
+        "value": "nkh",
         "text": "Nakhon Pathom"
     },
     {
@@ -305,8 +305,8 @@
         "text": "Samut Songkhram"
     },
     {
-        "key": "ptb",
-        "value": "ptb",
+        "key": "pcn",
+        "value": "pcn",
         "text": "Phetchaburi"
     },
     {

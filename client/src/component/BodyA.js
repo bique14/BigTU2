@@ -11,12 +11,13 @@ export class BodyA extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
+            provinceList: province_list,
             projectEN: '',
             projectTH: '',
             projectID: '',
             startDate: moment(),
             endDate: '',
-            province: province_list,
+            province: '',
             projectManagerName: '',
             projectManagerSurname: '',
             projectManagetTel: '',
@@ -30,7 +31,34 @@ export class BodyA extends React.Component {
     }
 
     onSubmitForm = (e) => {
+        this.props.getStateFormA(this.state)
+    }
 
+    onProjectTHChange = (e) => {
+        this.setState({
+            projectTH: e.target.value
+        }, () => {
+            // console.log(this.state)
+        })
+    }
+
+    onProjectENChange = (e) => {
+        this.setState({
+            projectEN: e.target.value
+        }, () => {
+            // console.log(this.state)
+        })
+    }
+
+    validateTel = () => {
+
+    }
+
+    onChangeProvince = (e, data) => {
+        this.setState({
+            province: e.target.value
+        })
+        console.log(data.value)
     }
 
     render() {
@@ -40,21 +68,23 @@ export class BodyA extends React.Component {
                     <Label as='a' color='red' ribbon >
                         ข้อมูลโครงการ
                     </Label>
-                    <Form onSubmit={this.onSubmitForm}>
+                    <Form >
                         <Form.Group widths='equal' className='div-data'>
                             <Form.Input
                                 fluid
                                 id='form-subcomponent-shorthand-input-first-name'
-                                ref="projectTH"
                                 label='ชื่อโครงการ'
                                 placeholder='ชื่อโครงการ'
+                                value={this.state.projectTH}
+                                onChange={this.onProjectTHChange}
                             />
                             <Form.Input
                                 fluid
                                 id='form-subcomponent-shorthand-input-last-name'
-                                ref="projectEN"
                                 label='Project name'
                                 placeholder='Project name'
+                                value={this.state.projectEN}
+                                onChange={this.onProjectENChange}
                             />
                         </Form.Group>
                         <Form.Group widths='equal'>
@@ -68,7 +98,6 @@ export class BodyA extends React.Component {
                             <Grid columns={2} textAlign='center' className='grid-col'>
                                 <Grid.Column>
                                     <h5 className='text-style'>ระยะเวลาเริ่มต้น</h5>
-
                                     <DatePicker
                                         className='date-picker1'
                                         selected={this.state.startDate}
@@ -78,7 +107,6 @@ export class BodyA extends React.Component {
                                 </Grid.Column>
                                 <Grid.Column>
                                     <h5 className='text-style'>ระยะเวลาสิ้นสุด</h5>
-
                                     <DatePicker
                                         className='date-picker2'
                                         selected={this.state.startDate}
@@ -95,8 +123,10 @@ export class BodyA extends React.Component {
                                 placeholder='จังหวัด'
                                 search
                                 selection
-                                options={this.state.province}
+                                options={this.state.provinceList}
                                 className='dropdown'
+                                value={this.state.province}
+                                onChange={this.onChangeProvince}
                             />
                         </div>
                         <br />
@@ -177,7 +207,7 @@ export class BodyA extends React.Component {
                             />
                         </Form.Group>
                         <div style={{ align: 'center' }}>
-                            <Button icon positive labelPosition='right' type='submit'>
+                            <Button icon positive labelPosition='right' type='submit' onClick={this.onSubmitForm}>
                                 Next
                         <Icon name='right arrow' />
                             </Button>
