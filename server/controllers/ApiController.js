@@ -1,5 +1,6 @@
 var CampusesModel = require('../models/CampusesModel');
 var LaborsModel = require('../models/LaborsModel');
+var ProjectsModel = require('../models/ProjectsModel');
 
 const initResult = (result) => {
   if (!result) {
@@ -46,3 +47,59 @@ exports.createLabor = (req, res) => {
     }
   })
 };
+
+exports.createProject = (req, res) => {
+  const params = { ...req.body };
+  ProjectsModel.createProject(params, (err, doc, row) =>{
+    console.log(err, doc, row);
+    if (err) {
+      let result = initResult(false);
+      result['status_message'] = err.message;
+      res.send(result);
+    } else {
+      let result = initResult(true);
+      res.send(result);
+    }
+  })
+}
+
+exports.createAll = (req, res) => {
+  const params = { ...req.body };
+  CampusesModel.createCampus(params.campus , (err, doc, row) => {
+    console.log("doc",doc);
+    if (err) {
+      let result = initResult(false);
+      result['status_message'] = err.message;
+      res.send(result);
+    } else {
+      let campus_id = doc._id;
+      let labors = params.labors;
+      labors[0].campus_id = campus_id;
+      console.log("labors"+labors[0]) 
+      LaborsModel.createLabor(labors[0], (err, doc, row) => {
+        if (err) {
+          let result = initResult(false);
+          result['status_message'] = err.message;
+          res.send(result);
+        } else {
+          let campus_id = doc._id;
+          let project = params.project;
+          project.campus_id = campus_id;
+          ProjectsModel.createProject(project, (err, doc, row) =>{
+            console.log(err, doc, row);
+            if (err) {
+              let result = initResult(false);
+              result['status_message'] = err.message;
+              res.send(result);
+            } else {
+              let result = initResult(true);
+              res.send(result);
+            }
+          })
+        }
+      })
+      
+    }
+  })
+
+}

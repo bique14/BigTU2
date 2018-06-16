@@ -18,7 +18,7 @@
       "email": "somchai@supplier"
     }
   },
-  "campuses": {
+  "campus": {
     "address": "นี่คือที่อยู่ไซต์งานก่อสร้าง",
     "district": "ดอนเมือง",
     "province": "กรุงเทพ",
@@ -31,7 +31,6 @@
       "telnum": "0123456789",
       "id_number": "1100011110101",
       "nationality": "Burmese",
-      "follower_id": [],
       "occupation": "engineer",
       "followers": [
         {
@@ -71,15 +70,6 @@
           }
         }
       ]
-    },
-    {
-      "firstname": "Labor B",
-      "lastname": "Doe",
-      "telnum": "0123456789",
-      "id_number": "1100011110101",
-      "nationality": "Vietnamese",
-      "followers": [],
-      "occupation": "engineer"
     }
   ]
 }

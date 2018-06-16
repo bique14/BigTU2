@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const LaborsSchema = new mongoose.Schema({
-	camp_id: {
+	campus_id: {
 		type: String,
 		trim: true,
 		required: [true, 'camp_id is required']
