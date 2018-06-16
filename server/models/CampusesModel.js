@@ -22,4 +22,16 @@ const CampusesSchema = new mongoose.Schema({
   }
 });
 
-const CampusesModel = (module.exports = mongoose.model('Campuses', CampusesSchema, 'Campuses'));
+const CampusesModel = mongoose.model('Campuses', CampusesSchema, 'Campuses');
+
+exports.CampusesModel = CampusesModel;
+exports.createCampus = (body, cb) => {
+  let campus = new CampusesModel();
+  campus.address = body.address;
+  campus.district = body.district;
+  campus.province = body.province;
+  campus.have_the_good_space = body.have_the_good_space;
+  campus.save((err) => {
+    cb(err)
+  });
+};

@@ -9,6 +9,7 @@ app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x
 const config = require('./config/database');
 const CampusesModel = require('./models/CampusesModel');
 const ApiController = require('./controllers/ApiController')
+const ApiRouter = require('./routes/ApiRouter')
 
 mongoose.connect(config.database);
 mongoose.connection.on('connected', () => {
@@ -30,7 +31,7 @@ app.use(function(req, res, next) {
 });
 
 // REST for users
-// app.use('/api', userRouter);
+app.use('/api', ApiRouter);
 
 app.get('*', (req, res) => {
   res.setHeader('Content-Type', 'application/json');
