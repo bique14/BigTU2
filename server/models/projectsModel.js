@@ -1,8 +1,6 @@
 const mongoose = require('mongoose');
 
 const ProjectsSchema = new mongoose.Schema({
-
-
     campus_id: {
         type: String,
         trim: true,

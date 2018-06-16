@@ -22,6 +22,4 @@ const CampusesSchema = new mongoose.Schema({
   }
 });
 
-const campauses = mongoose.model('Campuses', CampusesSchema, 'Campuses');
-
 const CampusesModel = (module.exports = mongoose.model('Campuses', CampusesSchema, 'Campuses'));

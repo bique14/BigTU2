@@ -1,8 +1,6 @@
 const mongoose = require('mongoose');
 
 const LaborsSchema = new mongoose.Schema({
-
-
     camp_id: {
         type: String,
         trim: true,
@@ -41,9 +39,6 @@ const LaborsSchema = new mongoose.Schema({
         trim: true,
         required: [true, 'occupation is required']
     }
-
-
-
 });
 
 const Labors = (module.exports = mongoose.model('Labors', LaborsSchema, 'Labors'));
