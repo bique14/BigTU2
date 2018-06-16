@@ -6,17 +6,17 @@ var app = express();
 app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-wwwform-urlencoded
 
-// const config = require('./config/database');
-// const userModel = require('./models/userModel');
+const config = require('./config/database');
+const CampusesModel = require('./models/CampusesModel');
 
-// mongoose.connect(config.database);
-// mongoose.connection.on('connected', () => {
-//   console.log('Connected to database ' + config.database);
-// });
+mongoose.connect(config.database);
+mongoose.connection.on('connected', () => {
+  console.log('Connected to database ' + config.database);
+});
 
-// mongoose.connection.on('error', () => {
-//   console.log('Database error');
-// });
+mongoose.connection.on('error', () => {
+  console.log('Database error');
+});
 
 app.use(function(req, res, next) {
   res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
