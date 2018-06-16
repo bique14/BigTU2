@@ -1,39 +1,58 @@
 import React from 'react'
-import { Tab, Label, Form, Select, Divider, Grid, Button, Icon } from 'semantic-ui-react'
+import { Tab, Label, Form, Dropdown, Divider, Grid, Button, Icon } from 'semantic-ui-react'
 import moment from 'moment';
 import 'react-datepicker/dist/react-datepicker.css';
 import DatePicker from 'react-datepicker';
-import '../css/Header.css'
+import '../css/BodyA.css'
 
-const countryOptions = ['a', 'b']
+var province_list = require('../component/province.json')
 
 export class BodyA extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            startDate: moment()
+            projectEN: '',
+            projectTH: '',
+            projectID: '',
+            startDate: moment(),
+            endDate: '',
+            province: province_list,
+            projectManagerName: '',
+            projectManagerSurname: '',
+            projectManagetTel: '',
+            projectManagerEmail: '',
+            constructionName: '',
+            supplierName: '',
+            supplierSurname: '',
+            supplierTel: '',
+            supplierEmail: ''
         }
+    }
+
+    onSubmitForm = (e) => {
+
     }
 
     render() {
         return (
             <div>
                 <Tab.Pane attached={false}>
-                    <Label as='a' color='red' ribbon>
+                    <Label as='a' color='red' ribbon >
                         ข้อมูลโครงการ
                     </Label>
-                    <Form>
-                        <Form.Group widths='equal'>
+                    <Form onSubmit={this.onSubmitForm}>
+                        <Form.Group widths='equal' className='div-data'>
                             <Form.Input
                                 fluid
                                 id='form-subcomponent-shorthand-input-first-name'
+                                ref="projectTH"
                                 label='ชื่อโครงการ'
                                 placeholder='ชื่อโครงการ'
-                                onChange={this.onChange}
                             />
                             <Form.Input
                                 fluid
                                 id='form-subcomponent-shorthand-input-last-name'
+                                ref="projectEN"
                                 label='Project name'
                                 placeholder='Project name'
                             />
@@ -44,29 +63,42 @@ export class BodyA extends React.Component {
                                 id='form-subcomponent-shorthand-input-last-name'
                                 label='รหัสโครงการ'
                                 placeholder='รหัสโครงการ'
+                                style={{ width: '100%' }}
                             />
-                            <Select placeholder='Select your country' options={countryOptions} />
+                            <Grid columns={2} textAlign='center' className='grid-col'>
+                                <Grid.Column>
+                                    <h5 className='text-style'>ระยะเวลาเริ่มต้น</h5>
+
+                                    <DatePicker
+                                        className='date-picker1'
+                                        selected={this.state.startDate}
+                                        onChange={this.handleChange}
+                                        locale="en-gb"
+                                        placeholderText="Weeks start on Monday" />
+                                </Grid.Column>
+                                <Grid.Column>
+                                    <h5 className='text-style'>ระยะเวลาสิ้นสุด</h5>
+
+                                    <DatePicker
+                                        className='date-picker2'
+                                        selected={this.state.startDate}
+                                        onChange={this.handleChange}
+                                        locale="en-gb"
+                                        placeholderText="Weeks start on Monday" />
+                                </Grid.Column>
+                            </Grid >
+
                         </Form.Group>
-                        <Grid columns={2} relaxed>
-                            <Grid.Column>
-                                <span>ระยะเวลาเริ่มต้นโครงการ</span>
-
-                                <DatePicker
-                                    selected={this.state.startDate}
-                                    onChange={this.handleChange}
-                                    locale="en-gb"
-                                    placeholderText="Weeks start on Monday" />
-                            </Grid.Column>
-                            <Grid.Column>
-                                <span>ระยะเวลาสิ้นสุดโครงการ</span>
-
-                                <DatePicker
-                                    selected={this.state.startDate}
-                                    onChange={this.handleChange}
-                                    locale="en-gb"
-                                    placeholderText="Weeks start on Monday" />
-                            </Grid.Column>
-                        </Grid>
+                        <div >
+                            <h5 className='text-province'>จังหวัด</h5>
+                            <Dropdown
+                                placeholder='จังหวัด'
+                                search
+                                selection
+                                options={this.state.province}
+                                className='dropdown'
+                            />
+                        </div>
                         <br />
                         <Divider horizontal>Project manager contact</Divider>
                         <Form.Group widths='equal'>
@@ -103,13 +135,16 @@ export class BodyA extends React.Component {
                         <Label as='a' color='red' ribbon>
                             ข้อมูลผู้ประสานงานหัวหน้าคนงาน
                         </Label>
-                        <Form.Input
-                            fluid
-                            id='form-subcomponent-shorthand-input-first-name'
-                            label='construction name'
-                            placeholder='construction name'
-                            onChange={this.onChange}
-                        />
+                        <Form.Group widths='equal' className='div-data'>
+                            <Form.Input
+                                fluid
+                                id='form-subcomponent-shorthand-input-first-name'
+                                label='Construction name'
+                                placeholder='construction name'
+                                onChange={this.onChange}
+                            />
+                        </Form.Group>
+
                         <Divider horizontal>Supplier contact</Divider>
                         <Form.Group widths='equal'>
                             <Form.Input
@@ -141,13 +176,13 @@ export class BodyA extends React.Component {
                                 placeholder='อีเมล'
                             />
                         </Form.Group>
-                    </Form>
-                    <div style={{ align: 'center' }}>
-                        <Button icon positive labelPosition='right'>
-                            Next
+                        <div style={{ align: 'center' }}>
+                            <Button icon positive labelPosition='right' type='submit'>
+                                Next
                         <Icon name='right arrow' />
-                        </Button>
-                    </div>
+                            </Button>
+                        </div>
+                    </Form>
                 </Tab.Pane>
             </div>
         )

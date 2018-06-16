@@ -1,0 +1,43 @@
+.div-data {
+    padding-top: 10px
+}
+
+.date-picker1 {
+    width:500;
+    padding-top: 10px;
+    text-align: center;
+    /* margin-bottom:10px; */
+    /* margin-top:5px; */
+    font-size:30px;
+    /* width: 100px; */
+}
+
+.date-picker2 {
+    padding-top: 10px;
+    text-align: center;
+    /* margin-bottom:10px; */
+    /* margin-top:5px; */
+    font-size:20px;
+    /* margin-right:30px; */
+}
+
+
+.dropdown {
+    width:100%;
+    /* margin-top:0px; */
+}
+
+.text-style {
+    margin-bottom: 5px;
+}
+
+.text-province {
+    font-size:0.9em;
+    margin-top:5px;
+    margin-bottom: 5px;
+}
+
+.grid-col {
+    padding-right: 0; 
+    margin-bottom: 0;
+}
