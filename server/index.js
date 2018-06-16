@@ -8,6 +8,7 @@ app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x
 
 const config = require('./config/database');
 const CampusesModel = require('./models/CampusesModel');
+const ApiController = require('./controllers/ApiController')
 
 mongoose.connect(config.database);
 mongoose.connection.on('connected', () => {
@@ -33,11 +34,10 @@ app.use(function(req, res, next) {
 
 app.get('*', (req, res) => {
   res.setHeader('Content-Type', 'application/json');
-  res.send({
-    result: false,
-    status_code: 404,
-    status_message: 'Request not found'
-  });
+  let result = ApiController.initResult(false);
+  result['status_code'] = 404;
+  result['status_message'] = 'Request not found';
+  res.send(result);
 });
 
 app.listen(4000, function() {
