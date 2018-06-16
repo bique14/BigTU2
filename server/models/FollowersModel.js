@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 
 const FollowersSchema = new mongoose.Schema({
-
     firstname: {
         type: String,
         trim: true,
