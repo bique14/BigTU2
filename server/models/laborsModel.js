@@ -32,7 +32,7 @@ const LaborsSchema = new mongoose.Schema({
         trim: true,
         required: [true, 'nationality is required']
     },
-    follower_id: {
+    followers: {
         type: Array,
         trim: true
     },

@@ -34,12 +34,12 @@ const ProjectsSchema = new mongoose.Schema({
         required: [true, 'due_date is required']
     },
     project_manager: {
-        type: Array,
+        type: Object,
         trim: true,
         required: [true, 'project_manager is required']
     },
     supplier_contact: {
-        type: Array,
+        type: Object,
         trim: true,
         required: [true, 'supplier_contact is required']
     }
