@@ -10,14 +10,23 @@ export class Header extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            formA: ''
+            bodyA: '',
+            bodyB: ''
         }
     }
 
     getStateFormA = (state) => {
         // console.log(state)
         this.setState({
-            formA: state
+            bodyA: state
+        }, () => {
+            console.log(this.state)
+        })
+    }
+
+    getStateFormB = (state) => {
+        this.setState({
+            bodyB: state
         }, () => {
             console.log(this.state)
         })
@@ -25,7 +34,7 @@ export class Header extends React.Component {
     render() {
         const panes = [
             { menuItem: 'Step1', render: () => <BodyA getStateFormA={this.getStateFormA} /> },
-            { menuItem: 'Step2', render: () => <BodyB /> },
+            { menuItem: 'Step2', render: () => <BodyB getStateFormB={this.getStateFormB} /> },
             { menuItem: 'Step3', render: () => <BodyC /> },
             { menuItem: 'Step4', render: () => <BodyD /> }
         ]

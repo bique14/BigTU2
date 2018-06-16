@@ -33,7 +33,7 @@ export class BodyA extends React.Component {
             constructionName: '',
             supplierName: '',
             supplierSurname: '',
-            
+
             supplierTel: '',
             chkSupplierTel: true,
             supplierEmail: '',
@@ -291,7 +291,7 @@ export class BodyA extends React.Component {
                                     <Form.Input
                                         fluid
                                         id='form-subcomponent-shorthand-input-first-name'
-                                        label='เบอร์โทรศัพท์'
+                                        label='เบอร์โทรศัพท์ (10ตัวเลข)'
                                         placeholder='เบอร์โทรศัพท์'
                                         onChange={this.validateProjectManagerTel}
                                         error
@@ -309,7 +309,7 @@ export class BodyA extends React.Component {
                                     <Form.Input
                                         fluid
                                         id='form-subcomponent-shorthand-input-last-name'
-                                        label='อีเมล'
+                                        label='อีเมล (เช่น abc@gmail.com)'
                                         placeholder='อีเมล'
                                         onChange={this.validateProjectManagerEmail}
                                         error
@@ -363,7 +363,7 @@ export class BodyA extends React.Component {
                                     <Form.Input
                                         fluid
                                         id='form-subcomponent-shorthand-input-first-name'
-                                        label='เบอร์โทรศัพท์'
+                                        label='เบอร์โทรศัพท์ (10ตัวเลข)'
                                         placeholder='เบอร์โทรศัพท์'
                                         onChange={this.validateSupplierTel}
                                         error
@@ -382,7 +382,7 @@ export class BodyA extends React.Component {
                                         fluid
                                         id='form-subcomponent-shorthand-input-last-name'
                                         label='อีเมล'
-                                        placeholder='อีเมล'
+                                        placeholder='อีเมล (เช่น abc@gmail.com)'
                                         onChange={this.validateSupplierEmail}
                                         error
                                     />
@@ -390,9 +390,9 @@ export class BodyA extends React.Component {
 
                         </Form.Group>
                         <div style={{ align: 'center' }}>
-                            <Button icon positive labelPosition='right' type='submit' onClick={this.onSubmitForm}>
+                            <Button icon positive labelPosition='right' type='submit' onClick={this.onSubmitForm} >
                                 Next
-                        <Icon name='right arrow' />
+                                    <Icon name='right arrow' />
                             </Button>
                         </div>
                     </Form>
