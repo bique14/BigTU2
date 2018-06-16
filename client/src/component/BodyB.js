@@ -29,23 +29,27 @@ export class BodyB extends React.Component {
             laborType: '',
 
             // is follower
-            // laborFollower: [],
             haveHusband: false,
             haveWife: false,
             countLaborFollower: '',
 
             isFollowerMore15: false,
-            countFollowerMore15: '',
+            countFollowerMore15: 0,
             isFollowerLess15: false,
-            countFollowerLess15: '',
+            countFollowerLess15: 0,
             isFollowerOther: false,
-            countFollowerOther: ''
+            countFollowerOther: 0
 
         }
     }
 
     onSubmitForm = () => {
         this.props.getStateFormB(this.state)
+    }
+
+    getDataI = () => {
+        let sum = parseInt(this.state.countFollowerMore15) + parseInt(this.state.countFollowerLess15)
+        this.props.getDataCount(sum)
     }
 
     onCheckGoodSpace = (e, { value }) => {
@@ -161,7 +165,9 @@ export class BodyB extends React.Component {
             countFollowerMore15: e.target.value
         }, () => {
             console.log('countFollowerMore15', this.state.countFollowerMore15)
+            this.getDataI()
         })
+        
     }
 
     onChangeFollowerLess15 = (e) => {
@@ -169,6 +175,7 @@ export class BodyB extends React.Component {
             countFollowerLess15: e.target.value
         }, () => {
             console.log('countFollowerLess15', this.state.countFollowerLess15)
+            this.getDataI()
         })
     }
 
@@ -405,8 +412,8 @@ export class BodyB extends React.Component {
                                     this.state.chkLaborID &&
                                     this.state.laborNationality &&
                                     this.state.laborType ?
-                                    <Button positive onClick={this.onSubmitForm} >Next</Button> : 
-                                    <Button positive disabled >Next</Button>
+                                        <Button positive onClick={this.onSubmitForm} >Next</Button> :
+                                        <Button positive disabled >Next</Button>
                                 }
                                 {/* <Button positive>Next</Button> */}
                             </Button.Group>
