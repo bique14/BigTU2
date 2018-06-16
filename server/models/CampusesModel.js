@@ -31,7 +31,7 @@ exports.createCampus = (body, cb) => {
   campus.district = body.district;
   campus.province = body.province;
   campus.have_the_good_space = body.have_the_good_space;
-  campus.save((err) => {
-    cb(err)
+  campus.save((err, doc, row) => {
+    cb(err, doc, row);
   });
 };
