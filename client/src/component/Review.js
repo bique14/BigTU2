@@ -1,14 +1,14 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Icon, Card, Image, Segment, Statistic } from 'semantic-ui-react';
-import Kid from '../logo/kid.jpg';
-import Parent from '../logo/parent.jpg';
+import React from "react";
+import { Link } from "react-router-dom";
+import { Icon, Card, Image, Segment, Statistic } from "semantic-ui-react";
+import Kid from "../logo/kid.jpg";
+import Parent from "../logo/parent.jpg";
 
 export class Review extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      formA: ''
+      formA: ""
     };
   }
 
@@ -40,14 +40,12 @@ export class Review extends React.Component {
             </a>
           </Card.Content>
         </Card>
-        <Segment color="yellow" style={{ paddingLeft: '50px' }}>
-
-
+        <Segment color="yellow" style={{ paddingLeft: "50px" }}>
           <Statistic>
             <Statistic.Value>
               <Icon name="globe" />
               5
-              </Statistic.Value>
+            </Statistic.Value>
             <Statistic.Label>Nationalities</Statistic.Label>
           </Statistic>
 
@@ -55,7 +53,7 @@ export class Review extends React.Component {
             <Statistic.Value>
               <Image src={Parent} inline circular />
               42
-              </Statistic.Value>
+            </Statistic.Value>
             <Statistic.Label>Families</Statistic.Label>
           </Statistic>
           <Statistic.Group>

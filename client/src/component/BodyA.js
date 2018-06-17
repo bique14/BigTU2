@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Tab,
   Label,
@@ -8,43 +8,42 @@ import {
   Grid,
   Button,
   Icon
-} from 'semantic-ui-react';
-import moment from 'moment';
-import 'react-datepicker/dist/react-datepicker.css';
-import DatePicker from 'react-datepicker';
-import '../css/BodyA.css';
-import { Link } from 'react-router-dom';
+} from "semantic-ui-react";
+import moment from "moment";
+import "react-datepicker/dist/react-datepicker.css";
+import DatePicker from "react-datepicker";
+import "../css/BodyA.css";
 
-var province_list = require('../component/province.json');
+var province_list = require("../component/province.json");
 
 export default class BodyA extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       provinceList: province_list,
-      projectEN: '',
-      projectTH: '',
-      projectID: '',
+      projectEN: "",
+      projectTH: "",
+      projectID: "",
       startDateSelect: moment(),
-      startDateShow: moment().format('ddd MMM DD'),
+      startDateShow: moment().format("ddd MMM DD"),
       endDateSelect: moment(),
-      endDateShow: moment().format('ddd MMM DD'),
-      province: '',
+      endDateShow: moment().format("ddd MMM DD"),
+      province: "",
 
-      projectManagerName: '',
-      projectManagerSurname: '',
-      projectManagerTel: '',
+      projectManagerName: "",
+      projectManagerSurname: "",
+      projectManagerTel: "",
       chkManegerTel: true,
-      projectManagerEmail: '',
+      projectManagerEmail: "",
       chkManagerEmail: true,
 
-      constructionName: '',
-      supplierName: '',
-      supplierSurname: '',
+      constructionName: "",
+      supplierName: "",
+      supplierSurname: "",
 
-      supplierTel: '',
+      supplierTel: "",
       chkSupplierTel: true,
-      supplierEmail: '',
+      supplierEmail: "",
       chkSupplierEmail: true
     };
   }
@@ -97,7 +96,7 @@ export default class BodyA extends React.Component {
           },
           () => {
             console.log(
-              '[validate] project manager telephone no',
+              "[validate] project manager telephone no",
               this.state.chkManegerTel,
               this.state.projectManagerTel
             );
@@ -118,7 +117,7 @@ export default class BodyA extends React.Component {
           },
           () => {
             console.log(
-              '[validate] project manager email',
+              "[validate] project manager email",
               this.state.chkManegerTel,
               this.state.projectManagerEmail
             );
@@ -139,7 +138,7 @@ export default class BodyA extends React.Component {
           },
           () => {
             console.log(
-              '[validate] suplier telephone no',
+              "[validate] suplier telephone no",
               this.state.chkManegerTel,
               this.state.supplierTel
             );
@@ -160,7 +159,7 @@ export default class BodyA extends React.Component {
           },
           () => {
             console.log(
-              '[validate] supplier email',
+              "[validate] supplier email",
               this.state.chkManegerTel,
               this.state.supplierEmail
             );
@@ -177,33 +176,33 @@ export default class BodyA extends React.Component {
         province: data.value
       },
       () => {
-        console.log('province', this.state.province);
+        console.log("province", this.state.province);
       }
     );
   };
 
   onChangeStartDate = date => {
-    var parse_date = moment(date).format('ddd MMM DD');
+    var parse_date = moment(date).format("ddd MMM DD");
     this.setState(
       {
         startDateSelect: date,
         startDateShow: parse_date
       },
       () => {
-        console.log('start date ', this.state.startDateShow);
+        console.log("start date ", this.state.startDateShow);
       }
     );
   };
 
   onChangeEndDate = date => {
-    var parse_date = moment(date).format('ddd MMM DD');
+    var parse_date = moment(date).format("ddd MMM DD");
     this.setState(
       {
         endDateSelect: date,
         endDateShow: parse_date
       },
       () => {
-        console.log('end date', this.state.endDateShow);
+        console.log("end date", this.state.endDateShow);
       }
     );
   };
@@ -214,7 +213,7 @@ export default class BodyA extends React.Component {
         projectManagerName: e.target.value
       },
       () => {
-        console.log('project manager name', this.state.projectManagerName);
+        console.log("project manager name", this.state.projectManagerName);
       }
     );
   };
@@ -226,7 +225,7 @@ export default class BodyA extends React.Component {
       },
       () => {
         console.log(
-          'project manager surname',
+          "project manager surname",
           this.state.projectManagerSurname
         );
       }
@@ -239,7 +238,7 @@ export default class BodyA extends React.Component {
         constructionName: e.target.value
       },
       () => {
-        console.log('construction name', this.state.constructionName);
+        console.log("construction name", this.state.constructionName);
       }
     );
   };
@@ -250,7 +249,7 @@ export default class BodyA extends React.Component {
         supplierName: e.target.value
       },
       () => {
-        console.log('supplier name', this.state.supplierName);
+        console.log("supplier name", this.state.supplierName);
       }
     );
   };
@@ -261,7 +260,7 @@ export default class BodyA extends React.Component {
         supplierSurname: e.target.value
       },
       () => {
-        console.log('supplier surname', this.state.supplierSurname);
+        console.log("supplier surname", this.state.supplierSurname);
       }
     );
   };
@@ -297,7 +296,7 @@ export default class BodyA extends React.Component {
                 label="รหัสโครงการ"
                 placeholder="รหัสโครงการ"
                 onChange={this.onChangeProjectID}
-                style={{ width: '100%' }}
+                style={{ width: "100%" }}
               />
               <Grid columns={2} textAlign="center" className="grid-col">
                 <Grid.Column>

@@ -1,19 +1,13 @@
-import React from 'react';
-import _ from 'lodash';
-import { Route } from 'react-router-dom';
+import React from "react";
+import _ from "lodash";
 import {
   Icon,
-  Card,
-  Image,
   Segment,
-  Statistic,
   Table,
   Accordion,
   Input,
   Divider
-} from 'semantic-ui-react';
-import Kid from '../logo/kid.jpg';
-import Parent from '../logo/parent.jpg';
+} from "semantic-ui-react";
 
 const source = _.times(5, () => ({}));
 
@@ -33,7 +27,7 @@ export class KidOverview extends React.Component {
   }
 
   resetComponent = () =>
-    this.setState({ isLoading: false, results: [], value: '' });
+    this.setState({ isLoading: false, results: [], value: "" });
 
   handleResultSelect = (e, { result }) =>
     this.setState({ value: result.title });
@@ -44,7 +38,7 @@ export class KidOverview extends React.Component {
     setTimeout(() => {
       if (this.state.value.length < 1) return this.resetComponent();
 
-      const re = new RegExp(_.escapeRegExp(this.state.value), 'i');
+      const re = new RegExp(_.escapeRegExp(this.state.value), "i");
       const isMatch = result => re.test(result.title);
 
       this.setState({
@@ -80,10 +74,14 @@ export class KidOverview extends React.Component {
                   <Icon name="dropdown" />
                   ประวัติการรับวัคซีน
                 </Accordion.Title>
-                <Accordion.Content active={activeIndex === i++} >
-                  <p style={{ paddingLeft: '20px' }}>ชื่อวัคซีน : BCG, HB1</p>
-                  <p style={{ paddingLeft: '20px' }}>วันนัด : 12 สิงหาคม 2559</p>
-                  <p style={{ paddingLeft: '20px' }}>วันรับ : 16 สิงหาคม 2559</p>
+                <Accordion.Content active={activeIndex === i++}>
+                  <p style={{ paddingLeft: "20px" }}>ชื่อวัคซีน : BCG, HB1</p>
+                  <p style={{ paddingLeft: "20px" }}>
+                    วันนัด : 12 สิงหาคม 2559
+                  </p>
+                  <p style={{ paddingLeft: "20px" }}>
+                    วันรับ : 16 สิงหาคม 2559
+                  </p>
                   {/* <Accordion>
                     <Accordion.Title active={activeIndex === 0} index={0} onClick={this.handleClick}>
                       <Icon name='dropdown' />
@@ -96,7 +94,6 @@ export class KidOverview extends React.Component {
                       </p>
                     </Accordion.Content>
                   </Accordion> */}
-
                 </Accordion.Content>
               </Accordion>
             </Table.Row>
@@ -114,13 +111,21 @@ export class KidOverview extends React.Component {
                   ประวัติการรับวัคซีน
                 </Accordion.Title>
                 <Accordion.Content active={activeIndex === i++}>
-                  <p style={{ paddingLeft: '20px' }}>ชื่อวัคซีน : BCG, HB1</p>
-                  <p style={{ paddingLeft: '20px' }}>วันนัด : 12 สิงหาคม 2559</p>
-                  <p style={{ paddingLeft: '20px' }}>วันรับ : 16 สิงหาคม 2559</p>
+                  <p style={{ paddingLeft: "20px" }}>ชื่อวัคซีน : BCG, HB1</p>
+                  <p style={{ paddingLeft: "20px" }}>
+                    วันนัด : 12 สิงหาคม 2559
+                  </p>
+                  <p style={{ paddingLeft: "20px" }}>
+                    วันรับ : 16 สิงหาคม 2559
+                  </p>
                   <Divider clearing />
-                  <p style={{ paddingLeft: '20px' }}>ชื่อวัคซีน : OPV1, DTP-HB</p>
-                  <p style={{ paddingLeft: '20px' }}>วันนัด : 12 ตุลาคมม 2559</p>
-                  <p style={{ paddingLeft: '20px' }}>วันรับ : 16 ตุลาคม 2559</p>
+                  <p style={{ paddingLeft: "20px" }}>
+                    ชื่อวัคซีน : OPV1, DTP-HB
+                  </p>
+                  <p style={{ paddingLeft: "20px" }}>
+                    วันนัด : 12 ตุลาคมม 2559
+                  </p>
+                  <p style={{ paddingLeft: "20px" }}>วันรับ : 16 ตุลาคม 2559</p>
                 </Accordion.Content>
               </Accordion>
             </Table.Row>
@@ -138,9 +143,13 @@ export class KidOverview extends React.Component {
                   ประวัติการรับวัคซีน
                 </Accordion.Title>
                 <Accordion.Content active={activeIndex === i++}>
-                  <p style={{ paddingLeft: '20px' }}>ชื่อวัคซีน : BCG, HB1</p>
-                  <p style={{ paddingLeft: '20px' }}>วันนัด : 1 กุมภาพันธ์ 2559</p>
-                  <p style={{ paddingLeft: '20px' }}>วันรับ : 7 กุมภาพันธ์ 2559</p>
+                  <p style={{ paddingLeft: "20px" }}>ชื่อวัคซีน : BCG, HB1</p>
+                  <p style={{ paddingLeft: "20px" }}>
+                    วันนัด : 1 กุมภาพันธ์ 2559
+                  </p>
+                  <p style={{ paddingLeft: "20px" }}>
+                    วันรับ : 7 กุมภาพันธ์ 2559
+                  </p>
                 </Accordion.Content>
               </Accordion>
             </Table.Row>

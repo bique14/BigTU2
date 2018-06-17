@@ -1,19 +1,19 @@
-import React, { Component } from 'react';
-import { Route, Switch } from 'react-router-dom';
-import { Image, Menu, Segment } from 'semantic-ui-react';
-import { Link } from 'react-router-dom';
-import './css/App.css';
-import AppReview from './AppReview.js';
-import AppKid from './AppKid.js';
-import AppParent from './AppParent.js';
-import { Header } from './component/Header.js';
-import SansiriLogo from './logo/sansiri.jpg';
-import BodyA from './component/BodyA'
-import BodyB from './component/BodyB'
-import BodyC from './component/BodyC'
+import React, { Component } from "react";
+import { Route, Switch } from "react-router-dom";
+import { Image, Menu, Segment } from "semantic-ui-react";
+import { Link } from "react-router-dom";
+import "./css/App.css";
+import AppReview from "./AppReview.js";
+import AppKid from "./AppKid.js";
+import AppParent from "./AppParent.js";
+import { Header } from "./component/Header.js";
+import SansiriLogo from "./logo/sansiri.jpg";
+import BodyA from "./component/BodyA";
+import BodyB from "./component/BodyB";
+import BodyC from "./component/BodyC";
 
 class App extends Component {
-  state = { activeItem: 'home' };
+  state = { activeItem: "home" };
 
   handleItemClick = (e, { name }) => this.setState({ activeItem: name });
   constructor(props) {
@@ -30,14 +30,14 @@ class App extends Component {
               as={Link}
               to="/"
               name="Home"
-              active={activeItem === 'Home'}
+              active={activeItem === "Home"}
               onClick={this.handleItemClick}
             />
             <Menu.Item
               as={Link}
               to="/overview"
               name="Overview"
-              active={activeItem === 'Overview'}
+              active={activeItem === "Overview"}
               onClick={this.handleItemClick}
             />
           </Menu>

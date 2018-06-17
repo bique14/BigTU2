@@ -1,8 +1,8 @@
-import React from 'react';
-import { Tab, Label, Form, Divider, Button, Checkbox } from 'semantic-ui-react';
-import moment from 'moment';
-import 'react-datepicker/dist/react-datepicker.css';
-import '../css/Header.css';
+import React from "react";
+import { Tab, Label, Form, Divider, Button, Checkbox } from "semantic-ui-react";
+import moment from "moment";
+import "react-datepicker/dist/react-datepicker.css";
+import "../css/Header.css";
 
 var arr = [];
 
@@ -14,37 +14,37 @@ export default class BodyC extends React.Component {
       startDate: moment(),
       count: 0,
 
-      childName: '',
-      childSurname: '',
-      childID: '',
-      childBirthDay: '',
-      childBirthMonth: '',
-      childBirthYear: '',
-      childNationality: '',
+      childName: "",
+      childSurname: "",
+      childID: "",
+      childBirthDay: "",
+      childBirthMonth: "",
+      childBirthYear: "",
+      childNationality: "",
 
       childAge: 0,
 
       isSchoolInThai: true,
 
       isNursery: false,
-      nurseryName: '',
-      nurseryYear: '',
+      nurseryName: "",
+      nurseryYear: "",
 
       isPrimary: false,
-      primaryName: '',
-      primaryYear: '',
+      primaryName: "",
+      primaryYear: "",
 
       isSecondary: false,
-      secondaryName: '',
-      secondaryYear: '',
+      secondaryName: "",
+      secondaryYear: "",
 
       isHighSchool: false,
-      highSchoolName: '',
-      highSchoolYear: '',
+      highSchoolName: "",
+      highSchoolYear: "",
 
       isOther: false,
-      otherHighSchoolName: '',
-      otherHighSchoolYear: ''
+      otherHighSchoolName: "",
+      otherHighSchoolYear: ""
     };
   }
 
@@ -58,7 +58,7 @@ export default class BodyC extends React.Component {
         isSchoolInThai: !this.state.isSchoolInThai
       },
       () => {
-        console.log('school in thai', this.state.isSchoolInThai);
+        console.log("school in thai", this.state.isSchoolInThai);
       }
     );
   };
@@ -69,7 +69,7 @@ export default class BodyC extends React.Component {
         isNursery: !this.state.isNursery
       },
       () => {
-        console.log('nursery', this.state.isNursery);
+        console.log("nursery", this.state.isNursery);
       }
     );
   };
@@ -80,7 +80,7 @@ export default class BodyC extends React.Component {
         isPrimary: !this.state.isPrimary
       },
       () => {
-        console.log('primary', this.state.isPrimary);
+        console.log("primary", this.state.isPrimary);
       }
     );
   };
@@ -91,7 +91,7 @@ export default class BodyC extends React.Component {
         isSecondary: !this.state.isSecondary
       },
       () => {
-        console.log('secondary', this.state.isSecondary);
+        console.log("secondary", this.state.isSecondary);
       }
     );
   };
@@ -102,7 +102,7 @@ export default class BodyC extends React.Component {
         isHighSchool: !this.state.isHighSchool
       },
       () => {
-        console.log('highschool', this.state.isHighSchool);
+        console.log("highschool", this.state.isHighSchool);
       }
     );
   };
@@ -113,7 +113,7 @@ export default class BodyC extends React.Component {
         isOther: !this.state.isOther
       },
       () => {
-        console.log('other', this.state.isOther);
+        console.log("other", this.state.isOther);
       }
     );
   };
@@ -124,7 +124,7 @@ export default class BodyC extends React.Component {
         childName: e.target.value
       },
       () => {
-        console.log('child name', this.state.childName);
+        console.log("child name", this.state.childName);
       }
     );
   };
@@ -135,7 +135,7 @@ export default class BodyC extends React.Component {
         childSurname: e.target.value
       },
       () => {
-        console.log('child surname', this.state.childSurname);
+        console.log("child surname", this.state.childSurname);
       }
     );
   };
@@ -146,7 +146,7 @@ export default class BodyC extends React.Component {
         childID: e.target.value
       },
       () => {
-        console.log('child ID', this.state.childID);
+        console.log("child ID", this.state.childID);
       }
     );
   };
@@ -157,7 +157,7 @@ export default class BodyC extends React.Component {
         childBirthDay: e.target.value
       },
       () => {
-        console.log('child b day', this.state.childBirthDay);
+        console.log("child b day", this.state.childBirthDay);
       }
     );
   };
@@ -168,7 +168,7 @@ export default class BodyC extends React.Component {
         childBirthMonth: e.target.value
       },
       () => {
-        console.log('child b month', this.state.childBirthMonth);
+        console.log("child b month", this.state.childBirthMonth);
       }
     );
   };
@@ -178,10 +178,10 @@ export default class BodyC extends React.Component {
       {
         childBirthYear: e.target.value,
         childAge:
-          parseInt(moment().format('YYYY')) - (parseInt(e.target.value) - 543)
+          parseInt(moment().format("YYYY")) - (parseInt(e.target.value) - 543)
       },
       () => {
-        console.log('child age', this.state.childAge);
+        console.log("child age", this.state.childAge);
       }
     );
   };
@@ -192,7 +192,7 @@ export default class BodyC extends React.Component {
         childNationality: e.target.value
       },
       () => {
-        console.log('child nationality', this.state.childNationality);
+        console.log("child nationality", this.state.childNationality);
       }
     );
   };
@@ -203,7 +203,7 @@ export default class BodyC extends React.Component {
         nurseryName: e.target.value
       },
       () => {
-        console.log('nursery name', this.state.nurseryName);
+        console.log("nursery name", this.state.nurseryName);
       }
     );
   };
@@ -214,7 +214,7 @@ export default class BodyC extends React.Component {
         nurseryYear: e.target.value
       },
       () => {
-        console.log('nursery year', this.state.nurseryYear);
+        console.log("nursery year", this.state.nurseryYear);
       }
     );
   };
@@ -225,7 +225,7 @@ export default class BodyC extends React.Component {
         primaryName: e.target.value
       },
       () => {
-        console.log('primary name', this.state.primaryName);
+        console.log("primary name", this.state.primaryName);
       }
     );
   };
@@ -236,7 +236,7 @@ export default class BodyC extends React.Component {
         primaryYear: e.target.value
       },
       () => {
-        console.log('primary year', this.state.primaryYear);
+        console.log("primary year", this.state.primaryYear);
       }
     );
   };
@@ -247,7 +247,7 @@ export default class BodyC extends React.Component {
         secondaryName: e.target.value
       },
       () => {
-        console.log('second name', this.state.secondaryName);
+        console.log("second name", this.state.secondaryName);
       }
     );
   };
@@ -258,7 +258,7 @@ export default class BodyC extends React.Component {
         secondaryYear: e.target.value
       },
       () => {
-        console.log('second year', this.state.secondaryYear);
+        console.log("second year", this.state.secondaryYear);
       }
     );
   };
@@ -269,7 +269,7 @@ export default class BodyC extends React.Component {
         highSchoolName: e.target.value
       },
       () => {
-        console.log('high school name', this.state.highSchoolName);
+        console.log("high school name", this.state.highSchoolName);
       }
     );
   };
@@ -280,7 +280,7 @@ export default class BodyC extends React.Component {
         highSchoolYear: e.target.value
       },
       () => {
-        console.log('high school year', this.state.highSchoolYear);
+        console.log("high school year", this.state.highSchoolYear);
       }
     );
   };
@@ -291,7 +291,7 @@ export default class BodyC extends React.Component {
         otherHighSchoolName: e.target.value
       },
       () => {
-        console.log('other name', this.state.otherHighSchoolName);
+        console.log("other name", this.state.otherHighSchoolName);
       }
     );
   };
@@ -302,7 +302,7 @@ export default class BodyC extends React.Component {
         otherHighSchoolYear: e.target.value
       },
       () => {
-        console.log('other year', this.state.otherHighSchoolYear);
+        console.log("other year", this.state.otherHighSchoolYear);
       }
     );
   };
@@ -961,7 +961,7 @@ export default class BodyC extends React.Component {
             </Form>
           </div>
 
-          <div style={{ align: 'center', marginTop: 20 }}>
+          <div style={{ align: "center", marginTop: 20 }}>
             <Button.Group>
               <Button positive onClick={this.onSubmitForm}>
                 Submit

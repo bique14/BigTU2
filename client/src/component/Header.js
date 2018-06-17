@@ -1,9 +1,9 @@
-import React from 'react';
-import { Tab, Button } from 'semantic-ui-react';
-import '../css/Header.css';
-import BodyA from './BodyA.js';
-import BodyB from './BodyB.js';
-import BodyC from './BodyC.js';
+import React from "react";
+import { Tab, Button } from "semantic-ui-react";
+import "../css/Header.css";
+import BodyA from "./BodyA.js";
+import BodyB from "./BodyB.js";
+import BodyC from "./BodyC.js";
 
 export class Header extends React.Component {
   constructor(props) {
@@ -11,9 +11,9 @@ export class Header extends React.Component {
     this.state = {
       activeIndex: 0,
       countData: 0,
-      bodyA: '',
-      bodyB: '',
-      bodyC: ''
+      bodyA: "",
+      bodyB: "",
+      bodyC: ""
     };
   }
 
@@ -65,7 +65,7 @@ export class Header extends React.Component {
         countData: count
       },
       () => {
-        console.log('count', this.state.countData);
+        console.log("count", this.state.countData);
       }
     );
   };
@@ -76,7 +76,7 @@ export class Header extends React.Component {
   render() {
     const panes = [
       {
-        menuItem: 'Step1',
+        menuItem: "Step1",
         render: () => (
           <Tab.Pane>
             <BodyA
@@ -89,7 +89,7 @@ export class Header extends React.Component {
         )
       },
       {
-        menuItem: 'Step2',
+        menuItem: "Step2",
         render: () => (
           <Tab.Pane>
             <BodyB
@@ -103,7 +103,7 @@ export class Header extends React.Component {
         )
       },
       {
-        menuItem: 'Step3',
+        menuItem: "Step3",
         render: () => (
           <Tab.Pane>
             <BodyC

@@ -1,22 +1,19 @@
-import React from 'react';
+import React from "react";
 import {
   Tab,
   Label,
   Form,
   Dropdown,
   Divider,
-  Grid,
   Button,
   Icon,
   TextArea,
-  Checkbox,
-  Modal
-} from 'semantic-ui-react';
-import moment from 'moment';
-import 'react-datepicker/dist/react-datepicker.css';
-import '../css/Header.css';
+  Checkbox
+} from "semantic-ui-react";
+import "react-datepicker/dist/react-datepicker.css";
+import "../css/Header.css";
 
-var country_list = require('../component/province.json');
+var country_list = require("../component/province.json");
 
 export default class BodyB extends React.Component {
   constructor(props) {
@@ -25,24 +22,24 @@ export default class BodyB extends React.Component {
       provinceList: country_list,
       isFollower: true,
 
-      campAddress: '',
-      campProvince: '',
-      campDistrict: '',
+      campAddress: "",
+      campProvince: "",
+      campDistrict: "",
       haveGoodSpace: true,
 
-      laborName: '',
-      laborSurname: '',
-      laborTel: '',
+      laborName: "",
+      laborSurname: "",
+      laborTel: "",
       chkLaborTel: true,
-      laborID: '',
+      laborID: "",
       chkLaborID: true,
-      laborNationality: '',
-      laborType: '',
+      laborNationality: "",
+      laborType: "",
 
       // is follower
       haveHusband: false,
       haveWife: false,
-      countLaborFollower: '',
+      countLaborFollower: "",
 
       isFollowerMore15: false,
       countFollowerMore15: 0,
@@ -93,7 +90,7 @@ export default class BodyB extends React.Component {
         isFollowerMore15: !this.state.isFollowerMore15
       },
       () => {
-        console.log('check more15', this.state.isFollowerMore15);
+        console.log("check more15", this.state.isFollowerMore15);
       }
     );
   };
@@ -104,7 +101,7 @@ export default class BodyB extends React.Component {
         isFollowerLess15: !this.state.isFollowerLess15
       },
       () => {
-        console.log('check less15 ', this.state.isFollowerLess15);
+        console.log("check less15 ", this.state.isFollowerLess15);
       }
     );
   };
@@ -115,7 +112,7 @@ export default class BodyB extends React.Component {
         isFollowerOther: !this.state.isFollowerOther
       },
       () => {
-        console.log('check other ', this.state.isFollowerOther);
+        console.log("check other ", this.state.isFollowerOther);
       }
     );
   };
@@ -126,7 +123,7 @@ export default class BodyB extends React.Component {
         campAddress: e.target.value
       },
       () => {
-        console.log('camp address ', this.state.campAddress);
+        console.log("camp address ", this.state.campAddress);
       }
     );
   };
@@ -137,7 +134,7 @@ export default class BodyB extends React.Component {
         campProvince: data.value
       },
       () => {
-        console.log('Province', this.state.campProvince);
+        console.log("Province", this.state.campProvince);
       }
     );
   };
@@ -148,7 +145,7 @@ export default class BodyB extends React.Component {
         campDistrict: data.value
       },
       () => {
-        console.log('Distict', this.state.campDistrict);
+        console.log("Distict", this.state.campDistrict);
       }
     );
   };
@@ -159,7 +156,7 @@ export default class BodyB extends React.Component {
         laborName: e.target.value
       },
       () => {
-        console.log('labor name', this.state.laborName);
+        console.log("labor name", this.state.laborName);
       }
     );
   };
@@ -170,7 +167,7 @@ export default class BodyB extends React.Component {
         laborSurname: e.target.value
       },
       () => {
-        console.log('labor surname', this.state.laborSurname);
+        console.log("labor surname", this.state.laborSurname);
       }
     );
   };
@@ -185,7 +182,7 @@ export default class BodyB extends React.Component {
           },
           () => {
             console.log(
-              '[validate] labor telephone no',
+              "[validate] labor telephone no",
               this.state.chkLaborTel,
               this.state.laborTel
             );
@@ -206,7 +203,7 @@ export default class BodyB extends React.Component {
           },
           () => {
             console.log(
-              '[validate] labor id',
+              "[validate] labor id",
               this.state.chkLaborID,
               this.state.laborID
             );
@@ -223,7 +220,7 @@ export default class BodyB extends React.Component {
         laborNationality: e.target.value
       },
       () => {
-        console.log('labor nationality', this.state.laborNationality);
+        console.log("labor nationality", this.state.laborNationality);
       }
     );
   };
@@ -234,7 +231,7 @@ export default class BodyB extends React.Component {
         laborType: e.target.value
       },
       () => {
-        console.log('labor type', this.state.laborType);
+        console.log("labor type", this.state.laborType);
       }
     );
   };
@@ -245,7 +242,7 @@ export default class BodyB extends React.Component {
         countFollowerMore15: e.target.value
       },
       () => {
-        console.log('countFollowerMore15', this.state.countFollowerMore15);
+        console.log("countFollowerMore15", this.state.countFollowerMore15);
         this.getDataI();
       }
     );
@@ -257,7 +254,7 @@ export default class BodyB extends React.Component {
         countFollowerLess15: e.target.value
       },
       () => {
-        console.log('countFollowerLess15', this.state.countFollowerLess15);
+        console.log("countFollowerLess15", this.state.countFollowerLess15);
         this.getDataI();
       }
     );
@@ -269,7 +266,7 @@ export default class BodyB extends React.Component {
         countFollowerOther: e.target.value
       },
       () => {
-        console.log('countFollowerOther', this.state.countFollowerOther);
+        console.log("countFollowerOther", this.state.countFollowerOther);
       }
     );
   };
@@ -505,7 +502,7 @@ export default class BodyB extends React.Component {
               </div>
             )}
 
-            <div style={{ align: 'center' }}>
+            <div style={{ align: "center" }}>
               <Button.Group>
                 {//   this.state.campAddress !== 0 &&
                 // this.state.campProvince !== 0 &&
