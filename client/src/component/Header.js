@@ -1,18 +1,9 @@
 import React from 'react'
 import { Tab } from 'semantic-ui-react'
 import '../css/Header.css'
-<<<<<<< HEAD
 import {BodyA} from './BodyA.js'
 import {BodyB} from './BodyB.js'
 import {BodyC} from './BodyC.js'
-=======
-import { BodyA } from './BodyA.js'
-import { BodyB } from './BodyB.js'
-import { BodyC } from './BodyC.js'
-import { BodyD } from './BodyD.js'
-
-// var arr = []
->>>>>>> f487522fa0efc9dabf4e6111323c69df781c3b54
 
 export class Header extends React.Component {
     constructor(props) {
@@ -64,8 +55,7 @@ export class Header extends React.Component {
 
             { menuItem: 'Step1', render: () => <BodyA getStateFormA={this.getStateFormA} /> },
             { menuItem: 'Step2', render: () => <BodyB getStateFormB={this.getStateFormB} getDataCount={this.getDataCount} /> },
-            { menuItem: 'Step3', render: () => <BodyC getStateFormC={this.getStateFormC} countData={this.state.countData} /> },
-            { menuItem: 'Step4', render: () => <BodyD /> }
+            { menuItem: 'Step3', render: () => <BodyC getStateFormC={this.getStateFormC} countData={this.state.countData} /> }
         ]
         return (
             <div>
