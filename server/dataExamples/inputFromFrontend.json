@@ -1,13 +1,15 @@
 {
-  "name_thai": "แสนศิริ",
-  "name_english": "Sansiri",
-  "province": "Pathumtani",
-  "start_date": "2016-05-18",
-  "due_date": "2016-06-18",
-  "project_manager": {
-    "firstname": "John",
-    "lastname": "Doe",
-    "telnum": "012-345-6789"
+  "project": {
+    "name_thai": "แสนศิริ",
+    "name_english": "Sansiri",
+    "province": "Pathumtani",
+    "start_date": "2016-05-18",
+    "due_date": "2016-06-18",
+    "project_manager": {
+      "firstname": "John",
+      "lastname": "Doe",
+      "telnum": "012-345-6789"
+    }
   },
   "supplier_contact": {
     "construction_name": "Janny Doe (คนประสานงาน)",
@@ -24,52 +26,45 @@
     "province": "กรุงเทพ",
     "have_the_good_space": true
   },
-  "labors": [
-    {
-      "firstname": "Labor A",
-      "lastname": "Doe",
-      "telnum": "0123456789",
-      "id_number": "1100011110101",
+  "labors": [{
+    "firstname": "Labor A",
+    "lastname": "Doe",
+    "telnum": "0123456789",
+    "id_number": "1100011110101",
+    "nationality": "Burmese",
+    "occupation": "engineer",
+    "followers": [{
+      "firstname": "น้อง A",
+      "lastname": "นามสกุลน้อง A",
+      "id_number": "1234567890123",
+      "birthdate": "1990-06-03",
       "nationality": "Burmese",
-      "occupation": "engineer",
-      "followers": [
+      "gender": "male",
+      "have_injected_vaccine": false,
+      "medical_history": [{
+          "required_month": 1,
+          "title": "BCG, HB1",
+          "meet_date": "1990-07-03",
+          "inject_date": "1990-07-04"
+        },
         {
-          "firstname": "น้อง A",
-          "lastname": "นามสกุลน้อง A",
-          "id_number": "1234567890123",
-          "birthdate": "1990-06-03",
-          "nationality": "Burmese",
-          "gender": "male",
-          "have_injected_vaccine": false,
-          "medical_history": [
-            {
-              "required_month": 1,
-              "title": "BCG, HB1",
-              "meet_date": "1990-07-03",
-              "inject_date": "1990-07-04"
-            },
-            {
-              "required_month": 2,
-              "title": "OPV1, DTP-HB",
-              "meet_date": "1990-08-03",
-              "inject_date": "1990-08-04"
-            }
-          ],
-          "education_history": {
-            "have_been_study_in_thai": true,
-            "have_been_study_in_country": true,
-            "have_been_in_the_good_space": true,
-            "current_education": "ประถมศึกษา 1",
-            "educational_history": [
-              {
-                "title": "ระดับอนุบาล",
-                "school_name": "โรงเรียนพม่า",
-                "year": "1996"
-              }
-            ]
-          }
+          "required_month": 2,
+          "title": "OPV1, DTP-HB",
+          "meet_date": "1990-08-03",
+          "inject_date": "1990-08-04"
         }
-      ]
-    }
-  ]
+      ],
+      "education_history": {
+        "have_been_study_in_thai": true,
+        "have_been_study_in_country": true,
+        "have_been_in_the_good_space": true,
+        "current_education": "ประถมศึกษา 1",
+        "educational_history": [{
+          "title": "ระดับอนุบาล",
+          "school_name": "โรงเรียนพม่า",
+          "year": "1996"
+        }]
+      }
+    }]
+  }]
 }
