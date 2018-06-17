@@ -114,6 +114,7 @@ export class ParentOverview extends React.Component {
                   </Table.Cell>
                   {/* <Table.Cell> จำนวนบุตร: </Table.Cell> */}
                   <Table.Cell> สัญชาติ: {item.nationality}</Table.Cell>
+                  <Table.Cell> โทรศัพท์: {item.telnum}</Table.Cell>
                 </Table.Row>
                 <Table.Row />
               </Table.Body>
