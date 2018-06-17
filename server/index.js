@@ -8,8 +8,8 @@ app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x
 
 const config = require('./config/database');
 const CampusesModel = require('./models/CampusesModel');
-const ApiController = require('./controllers/ApiController')
-const ApiRouter = require('./routes/ApiRouter')
+const ApiController = require('./controllers/ApiController');
+const ApiRouter = require('./routes/ApiRouter');
 
 mongoose.connect(config.database);
 mongoose.connection.on('connected', () => {

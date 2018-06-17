@@ -37,6 +37,6 @@ exports.createCampus = (body, cb) => {
 };
 
 exports.getCampuses = () => {
-	let campusProjection = {};
-	return CampusesModel.find({}, campusProjection);
-}
+  let campusProjection = {};
+  return CampusesModel.find({}, campusProjection);
+};

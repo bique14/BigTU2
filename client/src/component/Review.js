@@ -1,14 +1,14 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { Icon, Card, Image, Segment, Statistic } from "semantic-ui-react";
-import Kid from "../logo/kid.jpg";
-import Parent from "../logo/parent.jpg";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Icon, Card, Image, Segment, Statistic } from 'semantic-ui-react';
+import Kid from '../logo/kid.jpg';
+import Parent from '../logo/parent.jpg';
 
 export class Review extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      formA: ""
+      formA: ''
     };
   }
 

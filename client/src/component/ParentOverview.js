@@ -1,6 +1,6 @@
-import React from "react";
-import _ from "lodash";
-import { Route } from "react-router-dom";
+import React from 'react';
+import _ from 'lodash';
+import { Route } from 'react-router-dom';
 import {
   Icon,
   Card,
@@ -10,9 +10,9 @@ import {
   Table,
   Accordion,
   Input
-} from "semantic-ui-react";
-import Kid from "../logo/kid.jpg";
-import Parent from "../logo/parent.jpg";
+} from 'semantic-ui-react';
+import Kid from '../logo/kid.jpg';
+import Parent from '../logo/parent.jpg';
 
 const source = _.times(5, () => ({}));
 
@@ -38,11 +38,11 @@ export class ParentOverview extends React.Component {
   }
 
   fetchDataAndSetState = () => {
-    fetch("http://localhost:4000/api/get_followers", {
-      method: "GET",
+    fetch('http://localhost:4000/api/get_followers', {
+      method: 'GET',
       headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json"
+        Accept: 'application/json',
+        'Content-Type': 'application/json'
       }
     })
       .then(response => response.json())
@@ -60,7 +60,7 @@ export class ParentOverview extends React.Component {
     this.setState({
       isLoading: false,
       results: [],
-      value: ""
+      value: ''
     });
 
   handleResultSelect = (e, { result }) =>
@@ -77,7 +77,7 @@ export class ParentOverview extends React.Component {
     setTimeout(() => {
       if (this.state.value.length < 1) return this.resetComponent();
 
-      const re = new RegExp(_.escapeRegExp(this.state.value), "i");
+      const re = new RegExp(_.escapeRegExp(this.state.value), 'i');
       const isMatch = result => re.test(result.title);
 
       this.setState({
