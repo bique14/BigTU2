@@ -8,6 +8,9 @@ import AppKid from './AppKid.js';
 import AppParent from './AppParent.js';
 import { Header } from './component/Header.js';
 import SansiriLogo from './logo/sansiri.jpg';
+import BodyA from './component/BodyA'
+import BodyB from './component/BodyB'
+import BodyC from './component/BodyC'
 
 class App extends Component {
   state = { activeItem: 'home' };
