@@ -7,6 +7,7 @@ import { Header } from './component/Header.js'
 import './css/App.css'
 import SansiriLogo from './logo/sansiri.jpg'
 import { Image, Menu, Segment } from 'semantic-ui-react'
+import { Link } from 'react-router-dom'
 
 
 class App extends Component {
@@ -24,8 +25,8 @@ class App extends Component {
       <div className="bodyColor">
         <Segment inverted>
           <Menu inverted pointing secondary>
-            <Menu.Item name='Home' active={activeItem === 'Home'} onClick={this.handleItemClick} />
-            <Menu.Item
+            <Menu.Item as={Link} to="/" name='Home' active={activeItem === 'Home'} onClick={this.handleItemClick} />
+            <Menu.Item as={Link} to="/overview"
               name='Overview'
               active={activeItem === 'Overview'}
               onClick={this.handleItemClick}
