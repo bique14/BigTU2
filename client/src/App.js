@@ -1,16 +1,13 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
+import { Image, Menu, Segment } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
+import './css/App.css';
 import AppReview from './AppReview.js';
 import AppKid from './AppKid.js';
 import AppParent from './AppParent.js';
 import { Header } from './component/Header.js';
-import './css/App.css';
 import SansiriLogo from './logo/sansiri.jpg';
-import { Image, Menu, Segment } from 'semantic-ui-react';
-import { Link } from 'react-router-dom';
-import BodyA from './component/BodyA';
-import BodyB from './component/BodyB';
-import BodyC from './component/BodyC';
 
 class App extends Component {
   state = { activeItem: 'home' };

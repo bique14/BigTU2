@@ -9,7 +9,8 @@ import {
   Statistic,
   Table,
   Accordion,
-  Input
+  Input,
+  Divider
 } from 'semantic-ui-react';
 import Kid from '../logo/kid.jpg';
 import Parent from '../logo/parent.jpg';
@@ -56,6 +57,7 @@ export class KidOverview extends React.Component {
   render() {
     const { isLoading, value, results } = this.state;
     const { activeIndex } = this.state;
+    let i = 0;
     return (
       <div>
         <Segment inverted>
@@ -65,59 +67,80 @@ export class KidOverview extends React.Component {
         <Table color="yellow" key="yellow">
           <Table.Body>
             <Table.Row>
-              <Table.Cell>ชื่อ-นามสกุล</Table.Cell>
-              <Table.Cell>ผู้ปกครอง</Table.Cell>
-              <Table.Cell>เรียนอยู่ Good Space หรือไม่</Table.Cell>
-              <Table.Cell>(ถ้าเรียน)เรียนโรงเรียนอะไร ชั้นอะไร</Table.Cell>
+              <Table.Cell>เด็กหญิงนิตา หม่าล่า</Table.Cell>
+              <Table.Cell>นายสุกี้ แสงสีเสียง</Table.Cell>
+              <Table.Cell>เรียนอยู่ Good Space หรือไม่: เรียน</Table.Cell>
+              <Table.Cell>กำลังศึกษาอยู่โรงเรียน: หนองตาบัวไผ่</Table.Cell>
               <Accordion>
                 <Accordion.Title
-                  active={activeIndex === 1}
-                  index={0}
+                  active={activeIndex === i}
+                  index={i}
                   onClick={this.handleClick}
                 >
                   <Icon name="dropdown" />
                   ประวัติการรับวัคซีน
                 </Accordion.Title>
-                <Accordion.Content active={activeIndex === 0}>
-                  <p>ประวัติจ้า</p>
+                <Accordion.Content active={activeIndex === i++} >
+                  <p style={{ paddingLeft: '20px' }}>ชื่อวัคซีน : BCG, HB1</p>
+                  <p style={{ paddingLeft: '20px' }}>วันนัด : 12 สิงหาคม 2559</p>
+                  <p style={{ paddingLeft: '20px' }}>วันรับ : 16 สิงหาคม 2559</p>
+                  {/* <Accordion>
+                    <Accordion.Title active={activeIndex === 0} index={0} onClick={this.handleClick}>
+                      <Icon name='dropdown' />
+                      What is a dog?
+                    </Accordion.Title>
+                    <Accordion.Content active={activeIndex === 0}>
+                      <p>
+                        A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can
+                        be found as a welcome guest in many households across the world.
+                      </p>
+                    </Accordion.Content>
+                  </Accordion> */}
+
                 </Accordion.Content>
               </Accordion>
             </Table.Row>
             <Table.Row>
-              <Table.Cell>ชื่อ-นามสกุล</Table.Cell>
-              <Table.Cell>ผู้ปกครอง</Table.Cell>
-              <Table.Cell>เรียนอยู่ Good Space หรือไม่</Table.Cell>
-              <Table.Cell>(ถ้าเรียน)เรียนโรงเรียนอะไร ชั้นอะไร</Table.Cell>
+              <Table.Cell>เด็กชายแจ็ค หมี่</Table.Cell>
+              <Table.Cell>นายสุกี้ แสงสีเสียง</Table.Cell>
+              <Table.Cell>เรียนอยู่ Good Space หรือไม่: เรียน</Table.Cell>
               <Accordion>
                 <Accordion.Title
-                  active={activeIndex === 1}
-                  index={0}
+                  active={activeIndex === i}
+                  index={i}
                   onClick={this.handleClick}
                 >
                   <Icon name="dropdown" />
                   ประวัติการรับวัคซีน
                 </Accordion.Title>
-                <Accordion.Content active={activeIndex === 0}>
-                  <p>ประวัติจ้า</p>
+                <Accordion.Content active={activeIndex === i++}>
+                  <p style={{ paddingLeft: '20px' }}>ชื่อวัคซีน : BCG, HB1</p>
+                  <p style={{ paddingLeft: '20px' }}>วันนัด : 12 สิงหาคม 2559</p>
+                  <p style={{ paddingLeft: '20px' }}>วันรับ : 16 สิงหาคม 2559</p>
+                  <Divider clearing />
+                  <p style={{ paddingLeft: '20px' }}>ชื่อวัคซีน : OPV1, DTP-HB</p>
+                  <p style={{ paddingLeft: '20px' }}>วันนัด : 12 ตุลาคมม 2559</p>
+                  <p style={{ paddingLeft: '20px' }}>วันรับ : 16 ตุลาคม 2559</p>
                 </Accordion.Content>
               </Accordion>
             </Table.Row>
             <Table.Row>
-              <Table.Cell>ชื่อ-นามสกุล</Table.Cell>
-              <Table.Cell>ผู้ปกครอง</Table.Cell>
-              <Table.Cell>เรียนอยู่ Good Space หรือไม่</Table.Cell>
-              <Table.Cell>(ถ้าเรียน)เรียนโรงเรียนอะไร ชั้นอะไร</Table.Cell>
+              <Table.Cell>เด็กหญิงจิ๊ก เหม่อ</Table.Cell>
+              <Table.Cell>นางสุโค่ย ขี้โวยวาย</Table.Cell>
+              <Table.Cell>เรียนอยู่ Good Space หรือไม่: ไม่</Table.Cell>
               <Accordion>
                 <Accordion.Title
-                  active={activeIndex === 1}
-                  index={0}
+                  active={activeIndex === i}
+                  index={i}
                   onClick={this.handleClick}
                 >
                   <Icon name="dropdown" />
                   ประวัติการรับวัคซีน
                 </Accordion.Title>
-                <Accordion.Content active={activeIndex === 0}>
-                  <p>ประวัติจ้า</p>
+                <Accordion.Content active={activeIndex === i++}>
+                  <p style={{ paddingLeft: '20px' }}>ชื่อวัคซีน : BCG, HB1</p>
+                  <p style={{ paddingLeft: '20px' }}>วันนัด : 1 กุมภาพันธ์ 2559</p>
+                  <p style={{ paddingLeft: '20px' }}>วันรับ : 7 กุมภาพันธ์ 2559</p>
                 </Accordion.Content>
               </Accordion>
             </Table.Row>

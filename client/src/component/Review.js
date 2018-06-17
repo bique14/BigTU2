@@ -40,12 +40,28 @@ export class Review extends React.Component {
             </a>
           </Card.Content>
         </Card>
+        <Segment color="yellow" style={{ paddingLeft: '50px' }}>
 
-        <Segment color="yellow" style={{ 'padding-left': '50px' }}>
+
+          <Statistic>
+            <Statistic.Value>
+              <Icon name="globe" />
+              5
+              </Statistic.Value>
+            <Statistic.Label>Nationalities</Statistic.Label>
+          </Statistic>
+
+          <Statistic>
+            <Statistic.Value>
+              <Image src={Parent} inline circular />
+              42
+              </Statistic.Value>
+            <Statistic.Label>Families</Statistic.Label>
+          </Statistic>
           <Statistic.Group>
             <Statistic>
               <Statistic.Value>22</Statistic.Value>
-              <Statistic.Label>Saves</Statistic.Label>
+              <Statistic.Label>Kids</Statistic.Label>
             </Statistic>
 
             <Statistic>
@@ -54,22 +70,6 @@ export class Review extends React.Component {
                 Thousand
               </Statistic.Value>
               <Statistic.Label>Signups</Statistic.Label>
-            </Statistic>
-
-            <Statistic>
-              <Statistic.Value>
-                <Icon name="globe" />
-                5
-              </Statistic.Value>
-              <Statistic.Label>Nationalities</Statistic.Label>
-            </Statistic>
-
-            <Statistic>
-              <Statistic.Value>
-                <Image src={Parent} inline circular />
-                42
-              </Statistic.Value>
-              <Statistic.Label>Families</Statistic.Label>
             </Statistic>
           </Statistic.Group>
         </Segment>
