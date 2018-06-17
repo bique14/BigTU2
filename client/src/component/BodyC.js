@@ -22,7 +22,7 @@ export class BodyC extends React.Component {
             <div>
 
                 <Tab.Pane attached={false}>
-                    <Label as='a' color='red' ribbon>
+                    <Label as='a' color='yellow' ribbon>
                         ข้อมูลบุตรหรือผู้ติดตามที่เป็นเด็ก (อายุ 0 - 15 ปี)
                     </Label>
                     <Divider horizontal>ข้อมูลบุตร/หลาน/ญาติ คนที่ i</Divider>
@@ -80,7 +80,7 @@ export class BodyC extends React.Component {
                     </Form>
 
 
-                    <Label as='a' color='red' ribbon>
+                    <Label as='a' color='yellow' ribbon>
                         เข้าโรงเรียนของไทยหรือไม่
                     </Label>
                     <Form>
@@ -185,7 +185,9 @@ export class BodyC extends React.Component {
 
 
 
-                    <Divider horizontal>เคยรับวัคซีนระหว่าง 0-4 ปีหรือไม่</Divider>
+                    <Label as='a' color='yellow' ribbon>
+                        ได้รับวัคซีนในช่วง 0-4 ปีที่ผ่านมาหรือไม่
+                    </Label>
                     <Form>
                       <Form.Field>
                         <Checkbox
