@@ -5,7 +5,7 @@ import 'react-datepicker/dist/react-datepicker.css';
 import DatePicker from 'react-datepicker';
 import '../css/Header.css'
 
-var arr = []
+var arr = ['1']
 
 export class BodyC extends React.Component {
     constructor(props) {
@@ -18,7 +18,7 @@ export class BodyC extends React.Component {
     handleChange = (e, { value }) => this.setState({ value })
 
     componentDidMount(){
-        arr = []
+        arr = ['1']
     }
 
     render() {
@@ -28,7 +28,6 @@ export class BodyC extends React.Component {
         return (
             <div>
                 <Tab.Pane attached={false}>
-<<<<<<< HEAD
                     <Label as='a' color='yellow' ribbon>
                         ข้อมูลบุตรหรือผู้ติดตามที่เป็นเด็ก (อายุ 0 - 15 ปี)
                     </Label>
@@ -89,10 +88,6 @@ export class BodyC extends React.Component {
 
                     <Label as='a' color='yellow' ribbon>
                         เข้าโรงเรียนของไทยหรือไม่
-=======
-                    <Label as='a' color='red' ribbon>
-                        ข้อมูลบุตรหรือผู้ติดตามที่เป็นเด็ก
->>>>>>> f487522fa0efc9dabf4e6111323c69df781c3b54
                     </Label>
                     {
                         arr.map((i) => {
@@ -152,190 +147,6 @@ export class BodyC extends React.Component {
                                             />
                                         </Form.Group>
 
-<<<<<<< HEAD
-                    <Label as='a' color='yellow' ribbon>
-                        ได้รับวัคซีนในช่วง 0-4 ปีที่ผ่านมาหรือไม่
-                    </Label>
-                    <Form>
-                      <Form.Field>
-                        <Checkbox
-                          radio
-                          label='ได้รับวัคซีนในช่วง 0-4 ปีที่ผ่านมา'
-                          name='checkboxRadioGroup'
-                          value='this'
-                          checked={this.state.value === 'this'}
-                          onChange={this.handleChange}
-                        />
-                      </Form.Field>
-                      <Form.Field>
-                        <Checkbox
-                          radio
-                          label='ไม่ได้รับวัคซีนในช่วง 0-4 ปีที่ผ่านมา'
-                          name='checkboxRadioGroup'
-                          value='that'
-                          checked={this.state.value === 'that'}
-                          onChange={this.handleChange}
-                        />
-                      </Form.Field>
-                    </Form>
-                    <div><Checkbox label={<label>แรกเกิด - 1 เดือน : BCG,HB1</label>} /></div>
-                    <Form.Input
-                        fluid
-                        id='form-subcomponent-shorthand-input-first-name'
-                        label='นัดวันที่'
-                        placeholder='เช่น 17/09/2538'
-                        onChange={this.onChange}
-                    />
-                    <Form.Input
-                        fluid
-                        id='form-subcomponent-shorthand-input-first-name'
-                        label='รับวันที่'
-                        placeholder='เช่น 20/09/2538'
-                        onChange={this.onChange}
-                    />
-                    <div><Checkbox label={<label>2 เดือน : OPV1,DTP-HB</label>} /></div>
-                    <Form.Input
-                        fluid
-                        id='form-subcomponent-shorthand-input-first-name'
-                        label='นัดวันที่'
-                        placeholder='เช่น 17/09/2538'
-                        onChange={this.onChange}
-                    />
-                    <Form.Input
-                        fluid
-                        id='form-subcomponent-shorthand-input-first-name'
-                        label='รับวันที่'
-                        placeholder='เช่น 20/09/2538'
-                        onChange={this.onChange}
-                    />
-                    <div><Checkbox label={<label>4 เดือน : OPV2,IPV1,DTP-HB2</label>} /></div>
-                    <Form.Input
-                        fluid
-                        id='form-subcomponent-shorthand-input-first-name'
-                        label='นัดวันที่'
-                        placeholder='เช่น 17/09/2538'
-                        onChange={this.onChange}
-                    />
-                    <Form.Input
-                        fluid
-                        id='form-subcomponent-shorthand-input-first-name'
-                        label='รับวันที่'
-                        placeholder='เช่น 20/09/2538'
-                        onChange={this.onChange}
-                    />
-                    <div><Checkbox label={<label>6 เดือน : OPV3,DTP-HB3</label>} /></div>
-                    <Form.Input
-                        fluid
-                        id='form-subcomponent-shorthand-input-first-name'
-                        label='นัดวันที่'
-                        placeholder='เช่น 17/09/2538'
-                        onChange={this.onChange}
-                    />
-                    <Form.Input
-                        fluid
-                        id='form-subcomponent-shorthand-input-first-name'
-                        label='รับวันที่'
-                        placeholder='เช่น 20/09/2538'
-                        onChange={this.onChange}
-                    />
-                    <div><Checkbox label={<label>9 เดือน : MMR1</label>} /></div>
-                    <Form.Input
-                        fluid
-                        id='form-subcomponent-shorthand-input-first-name'
-                        label='นัดวันที่'
-                        placeholder='เช่น 17/09/2538'
-                        onChange={this.onChange}
-                    />
-                    <Form.Input
-                        fluid
-                        id='form-subcomponent-shorthand-input-first-name'
-                        label='รับวันที่'
-                        placeholder='เช่น 20/09/2538'
-                        onChange={this.onChange}
-                    />
-                    <div><Checkbox label={<label>1 ปี : LAJE1</label>} /></div>
-                    <Form.Input
-                        fluid
-                        id='form-subcomponent-shorthand-input-first-name'
-                        label='นัดวันที่'
-                        placeholder='เช่น 17/09/2538'
-                        onChange={this.onChange}
-                    />
-                    <Form.Input
-                        fluid
-                        id='form-subcomponent-shorthand-input-first-name'
-                        label='รับวันที่'
-                        placeholder='เช่น 20/09/2538'
-                        onChange={this.onChange}
-                    />
-                    <div><Checkbox label={<label>1 ปี 6 เดือน : OPV4,DTP4</label>} /></div>
-                    <Form.Input
-                        fluid
-                        id='form-subcomponent-shorthand-input-first-name'
-                        label='นัดวันที่'
-                        placeholder='เช่น 17/09/2538'
-                        onChange={this.onChange}
-                    />
-                    <Form.Input
-                        fluid
-                        id='form-subcomponent-shorthand-input-first-name'
-                        label='รับวันที่'
-                        placeholder='เช่น 20/09/2538'
-                        onChange={this.onChange}
-                    />
-                    <div><Checkbox label={<label>2 ปี 6 เดือน : MMR2,LAJE2</label>} /></div>
-                    <Form.Input
-                        fluid
-                        id='form-subcomponent-shorthand-input-first-name'
-                        label='นัดวันที่'
-                        placeholder='เช่น 17/09/2538'
-                        onChange={this.onChange}
-                    />
-                    <Form.Input
-                        fluid
-                        id='form-subcomponent-shorthand-input-first-name'
-                        label='รับวันที่'
-                        placeholder='เช่น 20/09/2538'
-                        onChange={this.onChange}
-                    />
-                    <div><Checkbox label={<label>4 ปี : OPV5,DTP5</label>} /></div>
-                    <Form.Input
-                        fluid
-                        id='form-subcomponent-shorthand-input-first-name'
-                        label='นัดวันที่'
-                        placeholder='เช่น 17/09/2538'
-                        onChange={this.onChange}
-                    />
-                    <Form.Input
-                        fluid
-                        id='form-subcomponent-shorthand-input-first-name'
-                        label='รับวันที่'
-                        placeholder='เช่น 20/09/2538'
-                        onChange={this.onChange}
-                    />
-                    <div><Checkbox label={<label>อื่นๆ</label>} /></div>
-                    <Form.Input
-                        fluid
-                        id='form-subcomponent-shorthand-input-first-name'
-                        label='ชื่อวัคซีน'
-                        placeholder='ชื่อ'
-                        onChange={this.onChange}
-                    />
-                    <Form.Input
-                        fluid
-                        id='form-subcomponent-shorthand-input-first-name'
-                        label='นัดวันที่'
-                        placeholder='เช่น 20/09/2538'
-                        onChange={this.onChange}
-                    />
-                    <Form.Input
-                        fluid
-                        id='form-subcomponent-shorthand-input-first-name'
-                        label='รับวันที่'
-                        placeholder='เช่น 20/09/2538'
-                        onChange={this.onChange}
-                    />
-=======
                                         <Form.Field>
                                             <strong>เข้าโรงเรียนของประเทศไทยหรือไม่</strong>
                                         </Form.Field>
@@ -437,7 +248,6 @@ export class BodyC extends React.Component {
                                             onChange={this.onChange}
                                         />
                                     </Form>
->>>>>>> f487522fa0efc9dabf4e6111323c69df781c3b54
 
                                 </div>
                             )

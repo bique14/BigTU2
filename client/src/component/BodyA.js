@@ -314,14 +314,7 @@ export class BodyA extends React.Component {
                             }
                         </Form.Group>
                         <br />
-<<<<<<< HEAD
                         <Label as='a' color='yellow' ribbon>
-=======
-
-
-
-                        <Label as='a' color='red' ribbon>
->>>>>>> f487522fa0efc9dabf4e6111323c69df781c3b54
                             ข้อมูลผู้ประสานงานหัวหน้าคนงาน
                         </Label>
                         <Form.Group widths='equal' className='div-data'>
@@ -390,20 +383,11 @@ export class BodyA extends React.Component {
                             }
 
                         </Form.Group>
-<<<<<<< HEAD
 
                         <Button icon positive labelPosition='right' type='submit' onClick={this.onSubmitForm}>
                             Next
                         <Icon name='right arrow' />
                         </Button>        
-=======
-                        <div style={{ align: 'center' }}>
-                            <Button icon positive labelPosition='right' type='submit' onClick={this.onSubmitForm} >
-                                Next
-                                    <Icon name='right arrow' />
-                            </Button>
-                        </div>
->>>>>>> f487522fa0efc9dabf4e6111323c69df781c3b54
                     </Form>
                 </Tab.Pane>
             </div>
