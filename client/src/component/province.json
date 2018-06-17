@@ -1,0 +1,387 @@
+[
+    {
+        "key": "bkk",
+        "value": "bkk",
+        "text": "Bangkok"
+    },
+    {
+        "key": "smp",
+        "value": "smp",
+        "text": "Samut Prakarn"
+    },
+    {
+        "key": "ntb",
+        "value": "ntb",
+        "text": "Nonthaburi"
+    },
+    {
+        "key": "ptm",
+        "value": "ptm",
+        "text": "Pathum Thani"
+    },
+    {
+        "key": "ayt",
+        "value": "ayt",
+        "text": "Phra Nakhon Si Ayutthaya"
+    },
+    {
+        "key": "ant",
+        "value": "ant",
+        "text": "Ang Thong"
+    },
+    {
+        "key": "lbr",
+        "value": "lbr",
+        "text": "Lop Buri"
+    },
+    {
+        "key": "sbr",
+        "value": "sbr",
+        "text": "Sing Buri"
+    },
+    {
+        "key": "chn",
+        "value": "chn",
+        "text": "Chai Nat"
+    },
+    {
+        "key": "srb",
+        "value": "srb",
+        "text": "Saraburi"
+    },
+    {
+        "key": "crb",
+        "value": "crb",
+        "text": "Chon Buri"
+    },
+    {
+        "key": "ryn",
+        "value": "ryn",
+        "text": "Rayong"
+    },
+    {
+        "key": "ctb",
+        "value": "ctb",
+        "text": "Chanthaburi"
+    },
+    {
+        "key": "trt",
+        "value": "trt",
+        "text": "Trat"
+    },
+    {
+        "key": "ccs",
+        "value": "ccs",
+        "text": "Chachoengsao"
+    },
+    {
+        "key": "pcb",
+        "value": "pcb",
+        "text": "Prachin Buri"
+    },
+    {
+        "key": "nny",
+        "value": "nny",
+        "text": "Nakhon Nayok"
+    },
+    {
+        "key": "ske",
+        "value": "ske",
+        "text": "Sa kaeo"
+    },
+    {
+        "key": "nrc",
+        "value": "nrc",
+        "text": "Nakhon Ratchasima"
+    },
+    {
+        "key": "brr",
+        "value": "brr",
+        "text": "Buri Ram"
+    },
+    {
+        "key": "srn",
+        "value": "srn",
+        "text": "Surin"
+    },
+    {
+        "key": "ssk",
+        "value": "ssk",
+        "text": "Si Sa Ket"
+    },
+    {
+        "key": "ubn",
+        "value": "ubn",
+        "text": "Ubon Ratchathani"
+    },
+    {
+        "key": "yst",
+        "value": "yst",
+        "text": "Yasothon"
+    },
+    {
+        "key": "cyp",
+        "value": "cyp",
+        "text": "Chaiyaphum"
+    },
+    {
+        "key": "amc",
+        "value": "amc",
+        "text": "Amnat Charoen"
+    },
+    {
+        "key": "bkn",
+        "value": "bkn",
+        "text": "Bueng Kan"
+    },
+    {
+        "key": "nbl",
+        "value": "nbl",
+        "text": "Nong Bua Lam Phu"
+    },
+    {
+        "key": "kkn",
+        "value": "kkn",
+        "text": "Khon Kaen"
+    },
+    {
+        "key": "utn",
+        "value": "utn",
+        "text": "Udon Thani"
+    },
+    {
+        "key": "leo",
+        "value": "leo",
+        "text": "Loei"
+    },
+    {
+        "key": "nki",
+        "value": "nki",
+        "text": "Nong Khai"
+    },
+    {
+        "key": "msk",
+        "value": "msk",
+        "text": "Maha Sarakham"
+    },
+    {
+        "key": "ret",
+        "value": "ret",
+        "text": "Roi Et"
+    },
+    {
+        "key": "kls",
+        "value": "kls",
+        "text": "Kalasin"
+    },
+    {
+        "key": "skn",
+        "value": "skn",
+        "text": "Sakon Nakhon"
+    },
+    {
+        "key": "nkp",
+        "value": "nkp",
+        "text": "Nakhon Phanom"
+    },
+    {
+        "key": "mdh",
+        "value": "mdh",
+        "text": "Mukdahan"
+    },
+    {
+        "key": "chm",
+        "value": "chm",
+        "text": "Chiang Mai"
+    },
+    {
+        "key": "lmn",
+        "value": "lmn",
+        "text": "Lamphun"
+    },
+    {
+        "key": "lmg",
+        "value": "lmg",
+        "text": "Lampang"
+    },
+    {
+        "key": "utr",
+        "value": "utr",
+        "text": "Uttaradit"
+    },
+    {
+        "key": "phr",
+        "value": "phr",
+        "text": "Phrae"
+    },
+    {
+        "key": "nan",
+        "value": "nan",
+        "text": "Nan"
+    },
+    {
+        "key": "56",
+        "value": "",
+        "text": "Phayao"
+    },
+    {
+        "key": "cri",
+        "value": "cri",
+        "text": "Chiang Rai"
+    },
+    {
+        "key": "mhs",
+        "value": "mhs",
+        "text": "Mae Hong Son"
+    },
+    {
+        "key": "nks",
+        "value": "nks",
+        "text": "Nakhon Sawan"
+    },
+    {
+        "key": "utt",
+        "value": "utt",
+        "text": "Uthai Thani"
+    },
+    {
+        "key": "kpp",
+        "value": "kpp",
+        "text": "Kamphaeng Phet"
+    },
+    {
+        "key": "tak",
+        "value": "tak",
+        "text": "Tak"
+    },
+    {
+        "key": "skt",
+        "value": "skt",
+        "text": "Sukhothai"
+    },
+    {
+        "key": "psn",
+        "value": "psn",
+        "text": "Phitsanulok"
+    },
+    {
+        "key": "pct",
+        "value": "pct",
+        "text": "Phichit"
+    },
+    {
+        "key": "ptb",
+        "value": "ptb",
+        "text": "Phetchabun"
+    },
+    {
+        "key": "rcb",
+        "value": "rcb",
+        "text": "Ratchaburi"
+    },
+    {
+        "key": "kcb",
+        "value": "kcb",
+        "text": "Kanchanaburi"
+    },
+    {
+        "key": "spb",
+        "value": "spb",
+        "text": "Suphan Buri"
+    },
+    {
+        "key": "nkh",
+        "value": "nkh",
+        "text": "Nakhon Pathom"
+    },
+    {
+        "key": "sms",
+        "value": "sms",
+        "text": "Samut Sakhon"
+    },
+    {
+        "key": "smk",
+        "value": "smk",
+        "text": "Samut Songkhram"
+    },
+    {
+        "key": "pcn",
+        "value": "pcn",
+        "text": "Phetchaburi"
+    },
+    {
+        "key": "pkk",
+        "value": "pkk",
+        "text": "Prachuap Khiri Khan"
+    },
+    {
+        "key": "nst",
+        "value": "nst",
+        "text": "Nakhon Si Thammarat"
+    },
+    {
+        "key": "krb",
+        "value": "krb",
+        "text": "Krabi"
+    },
+    {
+        "key": "phn",
+        "value": "pha",
+        "text": "Phang-nga"
+    },
+    {
+        "key": "phu",
+        "value": "phu",
+        "text": "Phuket"
+    },
+    {
+        "key": "srt",
+        "value": "srt",
+        "text": "Surat Thani"
+    },
+    {
+        "key": "rng",
+        "value": "rng",
+        "text": "Ranong"
+    },
+    {
+        "key": "chp",
+        "value": "chp",
+        "text": "Chumphon"
+    },
+    {
+        "key": "skh",
+        "value": "skh",
+        "text": "Songkhla"
+    },
+    {
+        "key": "sat",
+        "value": "sat",
+        "text": "Satun"
+    },
+    {
+        "key": "trn",
+        "value": "trn",
+        "text": "Trang"
+    },
+    {
+        "key": "ptl",
+        "value": "ptl",
+        "text": "Phatthalung"
+    },
+    {
+        "key": "ptn",
+        "value": "ptn",
+        "text": "Pattani"
+    },
+    {
+        "key": "yal",
+        "value": "yal",
+        "text": "Yala"
+    },
+    {
+        "key": "nrw",
+        "value": "nrw",
+        "text": "Narathiwat"
+    }
+]
