@@ -28,8 +28,66 @@ export class BodyC extends React.Component {
         return (
             <div>
                 <Tab.Pane attached={false}>
-                    <Label as='a' color='red' ribbon>
-                        ข้อมูลบุตรหรือผู้ติดตามที่เป็นเด็ก
+                    <Label as='a' color='yellow' ribbon>
+                        ข้อมูลบุตรหรือผู้ติดตามที่เป็นเด็ก (อายุ 0 - 15 ปี)
+                    </Label>
+                    <Divider horizontal>ข้อมูลบุตร/หลาน/ญาติ คนที่ i</Divider>
+                    <Form>
+                      <Form.Group widths='equal'>
+                          <Form.Input
+                              fluid
+                              id='form-subcomponent-shorthand-input-first-name'
+                              label='ชื่อ'
+                              placeholder='ชื่อ'
+                              onChange={this.onChange}
+                          />
+                          <Form.Input
+                              fluid
+                              id='form-subcomponent-shorthand-input-last-name'
+                              label='นามสกุล'
+                              placeholder='นามสกุล'
+                          />
+                      </Form.Group>
+                      <Form.Group widths='equal'>
+                          <Form.Input
+                              fluid
+                              id='form-subcomponent-shorthand-input-first-name'
+                              label='เลขประจำตัวเด็ก'
+                              placeholder='x-xxxx-xxxxx'
+                              onChange={this.onChange}
+                          />
+
+                          <Form.Input
+                              fluid
+                              id='form-subcomponent-shorthand-input-last-name'
+                              label='วันเกิด'
+                              placeholder='เช่น 17'
+                          />
+                          <Form.Input
+                              fluid
+                              id='form-subcomponent-shorthand-input-last-name'
+                              label='เดือนเกิด'
+                              placeholder='เช่น กันยายน'
+                          />
+                          <Form.Input
+                              fluid
+                              id='form-subcomponent-shorthand-input-last-name'
+                              label='ปีเกิด'
+                              placeholder='เช่น 2538'
+                          />
+                          <Form.Input
+                              fluid
+                              id='form-subcomponent-shorthand-input-first-name'
+                              label='สัญชาติ'
+                              placeholder='สัญชาติ'
+                              onChange={this.onChange}
+                          />
+                      </Form.Group>
+                    </Form>
+
+
+                    <Label as='a' color='yellow' ribbon>
+                        เข้าโรงเรียนของไทยหรือไม่
                     </Label>
                     {
                         arr.map((i) => {

@@ -192,8 +192,8 @@ export class BodyB extends React.Component {
             <div>
 
                 <Tab.Pane attached={false}>
-                    <Label as='a' color='red' ribbon>
-                        ข้อมูลแคมป์ที่พักคนงาน
+                    <Label as='a' color='yellow' ribbon>
+                      ข้อมูลแคมป์ที่พักคนงาน
                     </Label>
                     <Form>
                         <Form.Group widths='equal'>
@@ -252,8 +252,8 @@ export class BodyB extends React.Component {
                         </Form.Field>
 
 
-                        <Label as='a' color='red' ribbon>
-                            ข้อมูลแรงงาน
+                        <Label as='a' color='yellow' ribbon>
+                          ข้อมูลแรงงาน
                         </Label>
                         <Form.Group widths='equal'>
                             <Form.Input

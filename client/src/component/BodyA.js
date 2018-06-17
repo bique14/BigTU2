@@ -190,7 +190,7 @@ export class BodyA extends React.Component {
         return (
             <div>
                 <Tab.Pane attached={false}>
-                    <Label as='a' color='red' ribbon >
+                    <Label as='a' color='yellow' ribbon >
                         ข้อมูลโครงการ
                     </Label>
                     <Form >
@@ -244,20 +244,17 @@ export class BodyA extends React.Component {
                                     />
                                 </Grid.Column>
                             </Grid >
-
                         </Form.Group>
-                        <div >
-                            <h5 className='text-province'>จังหวัด</h5>
-                            <Dropdown
-                                placeholder='จังหวัด'
-                                search
-                                selection
-                                options={this.state.provinceList}
-                                className='dropdown'
-                                value={this.state.province}
-                                onChange={this.onChangeProvince}
-                            />
-                        </div>
+                          <h5 className='text-province'>จังหวัด</h5>
+                          <Dropdown
+                              placeholder='จังหวัด'
+                              search
+                              selection
+                              options={this.state.provinceList}
+                              className='dropdown'
+                              value={this.state.province}
+                              onChange={this.onChangeProvince}
+                          />
                         <br />
 
 
@@ -317,10 +314,7 @@ export class BodyA extends React.Component {
                             }
                         </Form.Group>
                         <br />
-
-
-
-                        <Label as='a' color='red' ribbon>
+                        <Label as='a' color='yellow' ribbon>
                             ข้อมูลผู้ประสานงานหัวหน้าคนงาน
                         </Label>
                         <Form.Group widths='equal' className='div-data'>
@@ -389,12 +383,11 @@ export class BodyA extends React.Component {
                             }
 
                         </Form.Group>
-                        <div style={{ align: 'center' }}>
-                            <Button icon positive labelPosition='right' type='submit' onClick={this.onSubmitForm} >
-                                Next
-                                    <Icon name='right arrow' />
-                            </Button>
-                        </div>
+
+                        <Button icon positive labelPosition='right' type='submit' onClick={this.onSubmitForm}>
+                            Next
+                        <Icon name='right arrow' />
+                        </Button>        
                     </Form>
                 </Tab.Pane>
             </div>
