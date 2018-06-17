@@ -40,7 +40,8 @@ export class Review extends React.Component {
             </a>
           </Card.Content>
         </Card>
-        <Segment color="yellow">
+
+        <Segment color="yellow" style={{ 'padding-left': '50px' }}>
           <Statistic.Group>
             <Statistic>
               <Statistic.Value>22</Statistic.Value>

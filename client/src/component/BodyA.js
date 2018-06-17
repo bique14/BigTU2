@@ -13,10 +13,11 @@ import moment from 'moment';
 import 'react-datepicker/dist/react-datepicker.css';
 import DatePicker from 'react-datepicker';
 import '../css/BodyA.css';
+import { Link } from 'react-router-dom';
 
 var province_list = require('../component/province.json');
 
-export class BodyA extends React.Component {
+export default class BodyA extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -50,6 +51,7 @@ export class BodyA extends React.Component {
 
   onSubmitForm = e => {
     this.props.getStateFormA(this.state);
+    this.props.onClick(this.props.value);
   };
 
   onChangeProjectTH = e => {
@@ -375,16 +377,16 @@ export class BodyA extends React.Component {
                 <Form.Input
                   fluid
                   id="form-subcomponent-shorthand-input-last-name"
-                  label="อีเมล"
-                  placeholder="อีเมล"
+                  label="อีเมล์"
+                  placeholder="อีเมล์"
                   onChange={this.validateProjectManagerEmail}
                 />
               ) : (
                 <Form.Input
                   fluid
                   id="form-subcomponent-shorthand-input-last-name"
-                  label="อีเมล (เช่น abc@gmail.com)"
-                  placeholder="อีเมล"
+                  label="อีเมล์ (เช่น abc@gmail.com)"
+                  placeholder="อีเมล์"
                   onChange={this.validateProjectManagerEmail}
                   error
                 />
@@ -444,16 +446,16 @@ export class BodyA extends React.Component {
                 <Form.Input
                   fluid
                   id="form-subcomponent-shorthand-input-last-name"
-                  label="อีเมล"
-                  placeholder="อีเมล"
+                  label="อีเมล์"
+                  placeholder="อีเมล์"
                   onChange={this.validateSupplierEmail}
                 />
               ) : (
                 <Form.Input
                   fluid
                   id="form-subcomponent-shorthand-input-last-name"
-                  label="อีเมล"
-                  placeholder="อีเมล (เช่น abc@gmail.com)"
+                  label="อีเมล์"
+                  placeholder="อีเมล์ (เช่น abc@gmail.com)"
                   onChange={this.validateSupplierEmail}
                   error
                 />
@@ -466,6 +468,8 @@ export class BodyA extends React.Component {
               labelPosition="right"
               type="submit"
               onClick={this.onSubmitForm}
+              // as={Link}
+              // to="/BodyB"
             >
               Next
               <Icon name="right arrow" />

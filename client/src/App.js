@@ -8,6 +8,9 @@ import './css/App.css';
 import SansiriLogo from './logo/sansiri.jpg';
 import { Image, Menu, Segment } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
+import BodyA from './component/BodyA';
+import BodyB from './component/BodyB';
+import BodyC from './component/BodyC';
 
 class App extends Component {
   state = { activeItem: 'home' };
@@ -47,6 +50,12 @@ class App extends Component {
           <Route path="/overview" component={AppReview} props={childProps} />
           <Route path="/kid" component={AppKid} props={childProps} />
           <Route path="/parent" component={AppParent} props={childProps} />
+
+          <Route path="/BodyA" component={BodyA} />
+          <Route path="/BodyB" component={BodyB} />
+          <Route path="/BodyC" component={BodyC} />
+          <Route path="/kid" component={AppKid} />
+          <Route path="/parent" component={AppParent} />
           <Route path="/" component={Header} props={childProps} />
         </Switch>
       </div>

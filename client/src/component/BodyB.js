@@ -18,7 +18,7 @@ import '../css/Header.css';
 
 var country_list = require('../component/province.json');
 
-export class BodyB extends React.Component {
+export default class BodyB extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -55,6 +55,7 @@ export class BodyB extends React.Component {
 
   onSubmitForm = () => {
     this.props.getStateFormB(this.state);
+    this.props.onClick(this.props.value);
   };
 
   getDataI = () => {
@@ -506,23 +507,23 @@ export class BodyB extends React.Component {
 
             <div style={{ align: 'center' }}>
               <Button.Group>
-                <Button>Back</Button>
-                <Button.Or />
-                {this.state.campAddress !== 0 &&
-                this.state.campProvince !== 0 &&
-                this.state.campDistrict !== 0 &&
-                this.state.laborName.length !== 0 &&
-                this.state.laborSurname.length !== 0 &&
-                this.state.chkLaborTel &&
-                this.state.chkLaborID &&
-                this.state.laborNationality &&
+                {//   this.state.campAddress !== 0 &&
+                // this.state.campProvince !== 0 &&
+                // this.state.campDistrict !== 0 &&
+                // this.state.laborName.length !== 0 &&
+                // this.state.laborSurname.length !== 0 &&
+                // this.state.chkLaborTel &&
+                // this.state.chkLaborID &&
+                // this.state.laborNationality &&
                 this.state.laborType ? (
                   <Button positive onClick={this.onSubmitForm}>
                     Next
+                    <Icon name="right arrow" />
                   </Button>
                 ) : (
                   <Button positive disabled>
                     Next
+                    <Icon name="right arrow" />
                   </Button>
                 )}
                 {/* <Button positive>Next</Button> */}
