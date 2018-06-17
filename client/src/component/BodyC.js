@@ -5,7 +5,7 @@ import 'react-datepicker/dist/react-datepicker.css';
 import DatePicker from 'react-datepicker';
 import '../css/Header.css'
 
-var arr = []
+var arr = ['1']
 
 export class BodyC extends React.Component {
     constructor(props) {
@@ -18,7 +18,7 @@ export class BodyC extends React.Component {
     handleChange = (e, { value }) => this.setState({ value })
 
     componentDidMount(){
-        arr = []
+        arr = ['1']
     }
 
     render() {

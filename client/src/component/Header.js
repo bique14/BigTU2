@@ -55,7 +55,7 @@ export class Header extends React.Component {
 
     render() {
         const panes = [
-            // { menuItem: 'Step1', render: () => <BodyA getStateFormA={this.getStateFormA} /> },
+            { menuItem: 'Step1', render: () => <BodyA getStateFormA={this.getStateFormA} /> },
             { menuItem: 'Step2', render: () => <BodyB getStateFormB={this.getStateFormB} getDataCount={this.getDataCount} /> },
             { menuItem: 'Step3', render: () => <BodyC getStateFormC={this.getStateFormC} countData={this.state.countData} /> },
             { menuItem: 'Step4', render: () => <BodyD /> }
