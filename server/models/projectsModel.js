@@ -55,3 +55,8 @@ exports.createProject = (body, cb) => {
 		cb(err, doc, row);
 	})
 }
+
+exports.getProjects = () => {
+	let projectProjection = {};
+	return ProjectsModel.find({}, projectProjection);
+}

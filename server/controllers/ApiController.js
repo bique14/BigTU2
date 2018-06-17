@@ -61,7 +61,7 @@ exports.createProject = (req, res) => {
       res.send(result);
     }
   })
-}
+};
 
 exports.createAll = (req, res) => {
   const params = { ...req.body };
@@ -97,9 +97,43 @@ exports.createAll = (req, res) => {
             }
           })
         }
-      })
-      
+      })  
     }
   })
+};
 
+exports.getProjects =  (req, res) => {
+  ProjectsModel.getProjects().then(data => {
+    let response = initResult(data);
+    response['data'] = data;
+    res.send(response);
+  }).catch(err => {
+    let response = initResult(err);
+    response.status_message = err.message
+    res.send(response);
+  })
+};
+
+exports.getLabors =  (req, res) => {
+  LaborsModel.getLabors().then(data => {
+    let response = initResult(data);
+    response['data'] = data;
+    res.send(response);
+  }).catch(err => {
+    let response = initResult(err);
+    response.status_message = err.message
+    res.send(response);
+  })
+};
+
+exports.getCampuses =  (req, res) => {
+  CampusesModel.getCampuses().then(data => {
+    let response = initResult(data);
+    response['data'] = data;
+    res.send(response);
+  }).catch(err => {
+    let response = initResult(err);
+    response.status_message = err.message
+    res.send(response);
+  })
 }

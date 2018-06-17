@@ -54,3 +54,8 @@ exports.createLabor = (body, cb) => {
 		cb(err, doc, row)
 	});
 }
+
+exports.getLabors = (body) => {
+	let laborProjection = {};
+	return LaborsModel.find({}, laborProjection);
+}
